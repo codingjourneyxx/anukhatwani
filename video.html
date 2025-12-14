@@ -578,245 +578,198 @@
 
 </div> 
 
-        <style>    @media (max-width: 768px){        .header_menu .bgr_mn_cl {            display: none;        }        .video_icon img {            max-width: 15px;        }        .video_icon {            top: 20px;            right: 15px;            opacity: 0.5;        }    }    @media (max-width: 480px){        .video_div .pot_item_bx_in h2 {            font-size: 15px;            line-height: 20px;        }    }    @media (max-width: 360px){        .pot_item_bx {            width: 50%;        }    }</style>
+        <style>
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    .port_div.video_div {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .grid.video_in {
+        width: 100%;
+        max-width: 100%;
+    }
+    .pot_item_bx_in video {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        display: block;
+    }
+    .pot_item_bx_in .por_tx p {
+        font-size: 13px;
+        color: #898989;
+        margin-top: 5px;
+        line-height: 1.4;
+    }
+    .video_bg {
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .video_bg.show {
+        display: flex;
+    }
+    .video_pop_in {
+        max-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vdo_pp_bx video {
+        max-height: 70vh;
+        width: auto;
+        max-width: 90vw;
+        cursor: pointer;
+    }
+    .video-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .mute-btn {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        background: rgba(0,0,0,0.5);
+        border: none;
+        padding: 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+    }
+    .mute-btn:hover {
+        background: rgba(0,0,0,0.7);
+    }
+    .mute-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    @media (max-width: 768px){
+        .header_menu .bgr_mn_cl { display: none; }
+        .video_icon img { max-width: 15px; }
+        .video_icon { top: 20px; right: 15px; opacity: 0.5; }
+        .pot_item_bx_in video { height: 150px; }
+    }
+    @media (max-width: 480px){
+        .video_div .pot_item_bx_in h2 { font-size: 15px; line-height: 20px; }
+        .pot_item_bx_in video { height: 280px; }
+        .video_div .pot_item_bx { width: 100% !important; }
+    }
+    @media (max-width: 360px){
+        .video_div .pot_item_bx { width: 100% !important; }
+    }
+</style>
 <div class="port_div video_div">
     <div class="filters-content">
         <div class="grid video_in">
-                                    <div class="pot_item_bx all video_box1">
+            <div class="pot_item_bx all video_box1">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/YlC8hHiC9ts" class="boxes_img video_Cl"><img src="images/cms/83836a06d808848dc6c880a7fbbb67a9.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Video-370.mp4" class="boxes_img video_Cl_local"><video src="videos/Video-370.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Artwork</h2>
+                        <h2>Dark Wooden Bar Trolley</h2>
+                        <p>Versatile stylish piece for serving beverages</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box2">
+            <div class="pot_item_bx all video_box2">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/22q_OskQeBY" class="boxes_img video_Cl"><img src="images/cms/a2fcc4b70062683dbb661ac3d2d7119e.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/A masterpiece of vintage craftsmanship….Our hand-carved solid wooden poles bed frame embodies ti.mp4" class="boxes_img video_Cl_local"><video src="videos/A masterpiece of vintage craftsmanship….Our hand-carved solid wooden poles bed frame embodies ti.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Balinese House & <br>The Oasis Interior</h2>
+                        <h2>Vintage Wooden Bed Frame</h2>
+                        <p>Hand-carved with timeless elegance</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box3">
+            <div class="pot_item_bx all video_box3">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/cwPWaReOyYg" class="boxes_img video_Cl"><img src="images/cms/0885e4816b63dcaa957e9f4c731ca7f2.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Discover timeless elegance with artisanal craftsmanship… This handcrafted solid wooden rustic Ba.mp4" class="boxes_img video_Cl_local"><video src="videos/Discover timeless elegance with artisanal craftsmanship… This handcrafted solid wooden rustic Ba.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Balinese House Drone View</h2>
+                        <h2>Rustic Bar Cabinet</h2>
+                        <p>Handcrafted to organize your collection</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box4">
+            <div class="pot_item_bx all video_box4">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/PwmIIGTpqyM" class="boxes_img video_Cl"><img src="images/cms/22849263d3b5dd5bcf9d12faeffd9dc2.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Elevate your interiors with artistry and elegance… This masterfully carved wooden chest, adorned.mp4" class="boxes_img video_Cl_local"><video src="videos/Elevate your interiors with artistry and elegance… This masterfully carved wooden chest, adorned.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Balinese House Visual</h2>
+                        <h2>Carved Wooden Chest</h2>
+                        <p>Nature-inspired bird and branch motifs</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box5">
+            <div class="pot_item_bx all video_box5">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/NjOUimt8IMs" class="boxes_img video_Cl"><img src="images/cms/video_img4.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Indulge in comfort, embrace timeless elegance…. This exquisitely pinned crafted chaise lounge fe.mp4" class="boxes_img video_Cl_local"><video src="videos/Indulge in comfort, embrace timeless elegance…. This exquisitely pinned crafted chaise lounge fe.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Balinese House Interior Décor</h2>
+                        <h2>Tufted Chaise Lounge</h2>
+                        <p>Classic design with modern luxury</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box6">
+            <div class="pot_item_bx all video_box6">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/uBOP90jh7Fk" class="boxes_img video_Cl"><img src="images/cms/video_img8.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Experience timeless elegance with exquisite craftsmanship…, This handcrafted wooden cabinet, hig.mp4" class="boxes_img video_Cl_local"><video src="videos/Experience timeless elegance with exquisite craftsmanship…, This handcrafted wooden cabinet, hig.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Checkered Vanity Room</h2>
+                        <h2>Rose Handle Cabinet</h2>
+                        <p>Artistry and sophistication combined</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box7">
+            <div class="pot_item_bx all video_box7">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/2gcyMQ5mK1w" class="boxes_img video_Cl"><img src="images/cms/video_img6.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Experience the harmony of comfort and elegance…. These simple straight lines plush tufted armcha.mp4" class="boxes_img video_Cl_local"><video src="videos/Experience the harmony of comfort and elegance…. These simple straight lines plush tufted armcha.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Site Construction</h2>
+                        <h2>Tufted Armchairs</h2>
+                        <p>Comfort meets timeless elegance</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box8">
+            <div class="pot_item_bx all video_box8">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/v69KKx5-ZrM" class="boxes_img video_Cl"><img src="images/cms/video_img7.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Elevate your living space with timeless glamour…. This exquisite vintage-style armchair features.mp4" class="boxes_img video_Cl_local"><video src="videos/Elevate your living space with timeless glamour…. This exquisite vintage-style armchair features.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Chandelier & Lamp Décor</h2>
+                        <h2>Vintage Armchair</h2>
+                        <p>Old-world charm with modern artistry</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box9">
+            <div class="pot_item_bx all video_box9">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/jsJdXqdJMh0" class="boxes_img video_Cl"><img src="images/cms/video_img9.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/A statement of nature-inspired artistry and refined craftsmanship…. This stunning rustic solid w (1).mp4" class="boxes_img video_Cl_local"><video src="videos/A statement of nature-inspired artistry and refined craftsmanship…. This stunning rustic solid w (1).mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>La Maison Home Study</h2>
+                        <h2>Rustic Wooden Cabinet</h2>
+                        <p>Timeless design with vintage charm</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box10">
+            <div class="pot_item_bx all video_box10">
                 <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/hTpHQJW1QKk" class="boxes_img video_Cl"><img src="images/cms/video_img10.jpg" alt=""></a>
+                    <a href="javascript:;" rel="videos/Embrace the art of timeless beauty…. Our exquisitely crafted life size vintage mirrors celebrate.mp4" class="boxes_img video_Cl_local"><video src="videos/Embrace the art of timeless beauty…. Our exquisitely crafted life size vintage mirrors celebrate.mp4" muted></video></a>
                     <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
                     <div class="por_tx">
-                        <h2>Entrance Foyers</h2>
+                        <h2>Vintage Mirrors</h2>
+                        <p>Rustic charm and timeless character</p>
                     </div>
                 </div>
             </div>
-                                    <div class="pot_item_bx all video_box11">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/eZj9yOVm9GQ" class="boxes_img video_Cl"><img src="images/cms/a330b638bd074f6bb13b4106d8153112.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Drawing Room Décor</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box12">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/YYUaoihCn9M" class="boxes_img video_Cl"><img src="images/cms/video_img12.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Media Coverage</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box13">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/cMUpH43zF30" class="boxes_img video_Cl"><img src="images/cms/video_img11.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Fendi Bedroom</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box14">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/Y-aV5VGfN30" class="boxes_img video_Cl"><img src="images/cms/video_img13.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Living Room Interior Décor</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box15">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/3pNtE3m9fYk" class="boxes_img video_Cl"><img src="images/cms/eb212aa7a2a53197b4c66f82a2324818.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Bedroom Décor</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box16">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/sebqUGyVpvs" class="boxes_img video_Cl"><img src="images/cms/12df80ccb38b501aea431f3ed0304f70.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>La Maison Construction Stage</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box17">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/SuF-XQTjnDQ" class="boxes_img video_Cl"><img src="images/cms/225873ac7ad605063d771ad211388f89.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Spanish Villa</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box18">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/XOjhrSV8SME" class="boxes_img video_Cl"><img src="images/cms/c123f3700e62db5fecc873ef9c82496a.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Stable-House</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box19">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/vMltQj030G0" class="boxes_img video_Cl"><img src="images/cms/0c35063694619be9bf8de455877201ff.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>The Oasis Interior Décor</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box20">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/g3bPo-8qFgE" class="boxes_img video_Cl"><img src="images/cms/aacd46843c716526fc3092abb58080b4.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>The Oasis Night View</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box21">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/yjNeYkNaiLA" class="boxes_img video_Cl"><img src="images/cms/6273dc7d2cc40579ae0ab645146e51b8.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>The Vintage House</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box22">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/RvhNctTIWNA" class="boxes_img video_Cl"><img src="images/cms/e494af1ccd227eec56f8b9e4285e5c12.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Timeless Checkered</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box23">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/OpBhbJh_xUE" class="boxes_img video_Cl"><img src="images/cms/f89fcc11a31c6dc5ca5263ba4ff3324f.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Trident Villa</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box24">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/NspojF3U_h8" class="boxes_img video_Cl"><img src="images/cms/310cd2134b914a2537acc4810b008680.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Vanity Room Designs</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box25">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/MkRsO3USIZ4" class="boxes_img video_Cl"><img src="images/cms/4436d13c5dcb4b5f9d45f2707dd08b57.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Vintage Kitchen</h2>
-                    </div>
-                </div>
-            </div>
-                                    <div class="pot_item_bx all video_box26">
-                <div class="pot_item_bx_in">
-                    <a href="javascript:;" rel="https://www.youtube.com/embed/TvQfhU6roYw" class="boxes_img video_Cl"><img src="images/cms/8a708040a2a12c98877efcc6e8a80b4b.jpg" alt=""></a>
-                    <div class="video_icon"><img src="front/images/video_icon.png" alt=""></div>
-                    <div class="por_tx">
-                        <h2>Void House</h2>
-                    </div>
-                </div>
-            </div>
-                                </div>
+        </div>
     </div>
 </div> 
 
@@ -840,10 +793,42 @@
         $('.vdo_pp_bx').append('<iframe width="100%" src="' + URL_video +'" frameborder="0" allowfullscreen></iframe>');
     });
 
+    $('.video_Cl_local').click(function(){
+        $('body').addClass('fixed_body')
+        var URL_video = $(this).attr('rel');
+        $('.vdo_pp_bx').empty();
+        $('.video_bg').addClass('show');
+        $('.vdo_pp_bx').append('<div class="video-wrapper"><video id="popupVideo" width="100%" autoplay><source src="' + URL_video +'" type="video/mp4"></video><button class="mute-btn"><svg class="sound-on" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg><svg class="sound-off" viewBox="0 0 24 24" fill="white" width="24" height="24" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg></button></div>');
+    });
+
+    // Click to pause/play
+    $(document).on('click', '#popupVideo', function(){
+        if(this.paused){
+            this.play();
+        } else {
+            this.pause();
+        }
+    });
+
+    // Mute button
+    $(document).on('click', '.mute-btn', function(e){
+        e.stopPropagation();
+        var video = document.getElementById('popupVideo');
+        if(video.muted){
+            video.muted = false;
+            $(this).find('.sound-on').show();
+            $(this).find('.sound-off').hide();
+        } else {
+            video.muted = true;
+            $(this).find('.sound-on').hide();
+            $(this).find('.sound-off').show();
+        }
+    });
+
     $('.videoclose_Cl').click(function(){
         $('body').removeClass('fixed_body')
         $('.vdo_pp_bx').empty();
-        $('.video_bg').fadeOut();
+        $('.video_bg').removeClass('show');
     });
 
 
