@@ -2558,9 +2558,130 @@ $('.pop_close').click(function(){
 
     })
 
-</script>          
+</script>
 
-    
+<!-- Image Popup Modal -->
+<style>
+.image-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+.image-popup-overlay.active {
+    display: flex;
+}
+.image-popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+.image-popup-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border: 3px solid #a18971;
+}
+.image-popup-close {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100000;
+    font-family: Arial, sans-serif;
+}
+.image-popup-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    transform: scale(1.1);
+}
+.image-popup-close:active {
+    transform: scale(0.95);
+}
+.boxes_img_Cl {
+    cursor: pointer;
+}
+</style>
+
+<!-- Image Popup HTML -->
+<div class="image-popup-overlay" id="imagePopup">
+    <span class="image-popup-close" id="closePopup">&#10005;</span>
+    <div class="image-popup-content">
+        <img src="" alt="Portfolio Image" id="popupImage">
+    </div>
+</div>
+
+<script>
+// Use capture phase to intercept clicks before they reach the anchor
+document.addEventListener('click', function(e) {
+    var target = e.target;
+
+    // Skip if clicking inside the popup
+    if (target.closest('#imagePopup')) {
+        return;
+    }
+
+    var imgSpan = target.closest('.boxes_img_Cl');
+
+    if (imgSpan) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        var img = imgSpan.querySelector('img');
+        if (img) {
+            var imgSrc = img.getAttribute('src');
+            document.getElementById('popupImage').setAttribute('src', imgSrc);
+            document.getElementById('imagePopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        return false;
+    }
+}, true); // true = capture phase
+
+// Close popup functions
+function closeImagePopup() {
+    document.getElementById('imagePopup').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close on X button click
+document.getElementById('closePopup').addEventListener('click', function(e) {
+    e.stopPropagation();
+    closeImagePopup();
+});
+
+// Close on overlay click
+document.getElementById('imagePopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeImagePopup();
+    }
+});
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 27) {
+        closeImagePopup();
+    }
+});
+</script>
 
 </body>
 
