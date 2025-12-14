@@ -3,7 +3,8 @@
     "allow": [
       "Bash(copy:*)",
       "Bash(timeout:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:anukhatwani.vercel.app)"
     ]
   }
 }
