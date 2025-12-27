@@ -2141,6 +2141,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
+    border-bottom: 3px solid #9f7e61;
   }
   #AboutPage .About_A img {
     width: 100%;
