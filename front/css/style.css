@@ -353,9 +353,9 @@ sup{font-size:10px;margin-left:2px;}
     text-align: center;
 }
 .home_portfolio {
-    background: url(../images/Portfolio_bg.jpg) no-repeat center center;
-    background-size: cover;
-/*    height: 100vh;*/
+    border-top: 3px solid #9f7e61;
+    border-bottom: 3px solid #9f7e61;
+
     padding: 35px 0 20px;
 }
 .portfolio_item {
@@ -634,7 +634,7 @@ ul.slick-dots li button {
 
 
 footer {
-    background: #070707;
+    background: #ffffff;
     padding-top: 70px;
     border-bottom: 1px solid #171717;
     position: relative;
@@ -659,14 +659,14 @@ footer ul li {
 }
 footer ul li a {
     display: inline-block;
-    color: #fff;
+    color: #333333;
     font-size: 22px;
     line-height: 30px;
     transition: 0.5s all ease;
 }
 footer p {
     font-size: 18px;
-    color: #fff;
+    color: #333333;
     line-height: 28px;
     font-weight: 300;
     margin-bottom: 5px;
@@ -682,7 +682,7 @@ footer p {
 .ftr_bx4 h5 {
     font-size: 24px;
     line-height: 33px;
-    color: #fff;
+    color: #333333;
     font-weight: 300;
     margin-bottom: 10px;
 }
@@ -755,7 +755,7 @@ section#section11 {
     height: 600px !important;
 }
 .ftr2 {
-    background: #070707;
+    background: #ffffff;
     position: relative;
     z-index: 9999;
 }
@@ -795,7 +795,7 @@ section#section11 {
     border-radius: 50%;
     display: flex !important;
     align-items: center;
-    color: #fff;
+    color: #9f7e61;
     justify-content: center;
     font-weight: 300;
     font-size: 16px;
