@@ -462,7 +462,7 @@
     line-height: 34px;
   }
   .home_service {
-    background: #070707;
+    background: #ffffff;
     padding-top: 70px;
   }
   .hmbrd_po h1 {
@@ -2136,7 +2136,7 @@
     width: 100%;
     transition: 0.5s;
     z-index: 99999;
-    background: #070707;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
