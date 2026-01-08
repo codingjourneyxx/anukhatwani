@@ -988,7 +988,7 @@ section#section11 {
     transition: all 1.4s cubic-bezier(0.22, 0.44, 0, 1);
 }
 .service_div1 {
-    background: #070707;
+    background: #fff;
     padding: 0px;
     overflow: hidden;
 }
@@ -1179,7 +1179,7 @@ label.error {
 }
 .src_lt_bx p {
     font-size: 14px;
-    color: #fff;
+    color: #333;
     line-height: 22px;
     font-weight: 300;
     margin-bottom: 20px;
