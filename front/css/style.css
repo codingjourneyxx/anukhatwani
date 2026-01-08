@@ -1688,21 +1688,18 @@ ul#menu {
 }
 
 
-.fp-viewing-ICONIC .src_rt_bx img, 
-.fp-viewing-INTERIOR .src_rt_bx img, 
-.fp-viewing-FURNITURE .src_rt_bx img, 
-.fp-viewing-SMART .src_rt_bx img, 
-.fp-viewing-DECOR .src_rt_bx img, 
-.fp-viewing-ARTISTRY .src_rt_bx img, 
-.fp-viewing-LANDSCAPE .src_rt_bx img, 
+.fp-viewing-ICONIC .src_rt_bx img,
+.fp-viewing-INTERIOR .src_rt_bx img,
+.fp-viewing-FURNITURE .src_rt_bx img,
+.fp-viewing-SMART .src_rt_bx img,
+.fp-viewing-DECOR .src_rt_bx img,
+.fp-viewing-ARTISTRY .src_rt_bx img,
+.fp-viewing-LANDSCAPE .src_rt_bx img,
 .fp-viewing-LIGHTING .src_rt_bx img,
 .fp-viewing-TURNKEY .src_rt_bx img{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -webkit-animation: zoomin 20s ease-in infinite;
-    animation: zoomin 20s ease-in infinite;
-    transition: all 20s ease-in-out;
 }
 
 
