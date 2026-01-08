@@ -79,8 +79,8 @@
     margin-bottom: 10px;
   }
   .home_service {
-    margin-top: -1px;
-    padding-top: 65px;
+    margin-top: 1px;
+    padding-top: 100px;
   }
   .home_service p {
     font-size: 16px;
@@ -598,8 +598,8 @@
     top: 200px;
     padding-right: 0;
     z-index: 9999;
-    margin-left: -201px;
-    width: 800px;
+    margin-left: 0px;
+    width: 700px;
   }
   .ertyui {
     padding-top: 0px;
