@@ -1135,27 +1135,12 @@ label.error {
 }
 
 .box_direction .src_lt_bx:before {
-    background: url(../images/service_lt_bg.png) no-repeat top right;
-    background-size: 78%;
-    position: absolute;
-    top: 65px;
-    right: 0;
+    background: none;
     content: "";
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
 }
 .src_lt_bx:before {
-    background: url(../images/service_lt_bg2.png) no-repeat top left;
-    background-size: 78%;
-    position: absolute;
-    top: 65px;
-    right: inherit;
-    left: 0;
+    background: none;
     content: "";
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
 }
 .src_lt_bx_in {
     max-width: 640px;
