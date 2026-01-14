@@ -480,38 +480,35 @@ $(document).ready(function() {
                                             class="global-menu__item global-menu__item--demo-5"><span
                                                 class="menu-span">About</span></a></span></li>
 
-                                <li class="has-submenu"><span class="menu_border"><a href="service.html"
+                                <li class="has-submenu"><span class="menu_border"><a href="service.html#FURNITURE"
                                             class="global-menu__item global-menu__item--demo-5"><span
                                                 class="menu-span">Furniture</span></a></span>
                                     <ul class="submenu">
-                                        <li><a href="service.html#SEATING">Seating</a></li>
-                                        <li><a href="service.html#TABLES">Tables & Surfaces</a></li>
-                                        <li><a href="service.html#STORAGE">Storage Pieces</a></li>
-                                        <li><a href="service.html#DINING">Dining</a></li>
-                                        <li><a href="service.html#BEDROOM">Bedroom</a></li>
-                                        <li><a href="service.html#CUSTOM">Custom Creations</a></li>
+                                        <li><a href="service.html#FURNITURE">Seating</a></li>
+                                        <li><a href="service.html#FURNITURE">Tables & Surfaces</a></li>
+                                        <li><a href="service.html#FURNITURE">Storage Pieces</a></li>
+                                        <li><a href="service.html#FURNITURE">Dining</a></li>
+                                        <li><a href="service.html#FURNITURE">Bedroom</a></li>
+                                        <li><a href="service.html#FURNITURE">Custom Creations</a></li>
                                     </ul>
                                 </li>
 
-                                <li class="has-submenu"><span class="menu_border"><a href="service.html"
+                                <li class="has-submenu"><span class="menu_border"><a href="service.html#INTERIOR"
                                             class="global-menu__item global-menu__item--demo-5"><span
                                                 class="menu-span">Interior Design</span></a></span>
                                     <ul class="submenu">
-                                        <li><a href="service.html#RESIDENTIAL">Residential Spaces</a></li>
-                                        <li><a href="service.html#COMMERCIAL">Commercial Spaces</a></li>
-                                        <li><a href="service.html#HOSPITALITY">Hospitality</a></li>
-                                        <li><a href="service.html#RETAIL">Retail & Boutiques</a></li>
+                                        <li><a href="service.html#INTERIOR">Residential</a></li>
+                                        <li><a href="service.html#INTERIOR">Commercial</a></li>
+                                        <li><a href="service.html#INTERIOR">Custom Projects</a></li>
                                     </ul>
                                 </li>
 
-                                <li class="has-submenu"><span class="menu_border"><a href="service.html"
+                                <li class="has-submenu"><span class="menu_border"><a href="service.html#DECOR"
                                             class="global-menu__item global-menu__item--demo-5"><span
                                                 class="menu-span">Décor</span></a></span>
                                     <ul class="submenu">
-                                        <li><a href="service.html#LIGHTING">Lighting</a></li>
-                                        <li><a href="service.html#ARTWORKS">Artworks</a></li>
-                                        <li><a href="service.html#ACCESSORIES">Accessories</a></li>
-                                        <li><a href="service.html#TEXTILES">Textiles & Soft Furnishings</a></li>
+                                        <li><a href="service.html#DECOR">Accent & Statement Pieces</a></li>
+                                        <li><a href="service.html#DECOR">Signature Pieces</a></li>
                                     </ul>
                                 </li>
 
@@ -832,9 +829,67 @@ $(document).ready(function() {
 
     <style>
         .src_lt_bx h2 span {
-
             text-transform: uppercase;
+        }
 
+        /* Service List Styling */
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 0 0;
+        }
+
+        .service-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(161, 137, 113, 0.2);
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list li strong {
+            color: #a18971;
+            font-weight: 600;
+            display: inline-block;
+            min-width: 180px;
+        }
+
+        @media (max-width: 768px) {
+            .service-list li {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+
+            .service-list li strong {
+                display: block;
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+
+        /* Override fullpage.js styles for normal scroll */
+        #fullpage {
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .section {
+            height: auto !important;
+            position: relative !important;
+            transform: none !important;
+        }
+
+        .fp-tableCell {
+            display: block !important;
+            height: auto !important;
+        }
+
+        #fp-nav {
+            display: none !important;
         }
     </style>
 
@@ -864,7 +919,7 @@ $(document).ready(function() {
 
                     <!-- <a href="#section1" class="href_click"><img src="https://anukhatwani.com/front/images/service_downaro.png" alt=""></a> -->
 
-                    <a href="#ICONIC" class="href_click">
+                    <a href="#FURNITURE" class="href_click">
 
                         <img src="front/images/contactarrow.png" alt="">
 
@@ -880,72 +935,8 @@ $(document).ready(function() {
 
 
 
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/Where craftsmanship meets contemporary elegance…. This mirrored-top table, adorned with sculpted.jpg"
-                        alt="ICONIC ARCHITECTURE"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>ICONIC ARCHITECTURE</span></h2>
-
-                        <p>Design is the manifestation of a story. To tailor a space to the versatile tastes of
-                            discerning clients, Principal Architect, Anu Khatwani begins by assimilating a narrative
-                            that spans both functional and aspirational preferences in modern as well as classic style
-                            signatures.</p>
-
-                        <p>Beginning with intricate sketches and swatches that capture the client&#39;s desired outcome,
-                            the team creates conceptual study models and highly sophisticated renders to visualize the
-                            process and results. From preliminary conception through design evolution, the team works
-                            inventively to deliver unique spaces with a signature style.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/Aesthetic Comfort…A Big Metal Pinned upholstered in linen accent chair offers support and comfor.jpg"
-                        alt="INTERIOR DESIGN"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>INTERIOR DESIGN</span></h2>
-
-                        <p>Discerning spaces deserve bespoke interiors. Anu Khatwani combines visual dexterity with an
-                            unparalleled access to internationally renowned materials, craftsmanship and processes that
-                            result in striking and exceptional homes. Her heightened sense of proportions creates
-                            elegant and timeless interiors of both contemporary and classically inspired homes. </p>
-                        <p>Throughout the process, the team includes sketches and elaborate mood board presentations,
-                            including the clients in the creation process. </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
+        <!-- FURNITURE Section -->
+        <section class="section service_div1 box_direction" id="FURNITURE">
 
             <div class="content-wrapper">
 
@@ -959,15 +950,16 @@ $(document).ready(function() {
 
                         <h2><span>FURNITURE</span></h2>
 
-                        <p>Commissioning everything from concept, design and build, the House of Anu Khatwani creates
-                            luxuriously unique furniture that echoes the overall architecture and aesthetic palette of
-                            high-caliber spaces.</p>
+                        <p>Commissioning everything from concept, design and build, the House of Anu Khatwani creates luxuriously unique furniture that echoes the overall architecture and aesthetic palette of high-caliber spaces.</p>
 
-                        <p>Her keen eye lends itself to the selection or design of each individual piece of furniture in
-                            every space of the home including entrance foyers, lounges, bedrooms, formal rooms and pool
-                            areas. Both customized and sourced pieces of furniture meet the studio&#39;s sophisticated
-                            standards of quality and follow a cohesive aesthetic that proportionally focused as well as
-                            visually striking.</p>
+                        <ul class="service-list">
+                            <li><strong>Seating</strong> — Handcrafted chairs, sofas, and lounges designed for comfort and elegance</li>
+                            <li><strong>Tables & Surfaces</strong> — Bespoke tables and consoles crafted with artisan detailing</li>
+                            <li><strong>Storage Pieces</strong> — Functional cabinets, chests, and wardrobes with timeless appeal</li>
+                            <li><strong>Dining</strong> — Elegant dining tables and chairs for memorable gatherings</li>
+                            <li><strong>Bedroom</strong> — Luxurious beds and nightstands for restful retreats</li>
+                            <li><strong>Custom Creations</strong> — One-of-a-kind pieces tailored to your unique vision</li>
+                        </ul>
 
                     </div>
 
@@ -979,25 +971,28 @@ $(document).ready(function() {
 
 
 
-        <section class="section service_div1 box_direction" id="section">
+        <!-- INTERIOR DESIGN Section -->
+        <section class="section service_div1 box_direction" id="INTERIOR">
 
             <div class="content-wrapper">
 
                 <div class="src_rt_bx"><img
-                        src="services/Where timeless design meets artisan mastery, this handcrafted wooden console set brings rustic e.jpg"
-                        alt="Smart Home"></div>
+                        src="services/Aesthetic Comfort…A Big Metal Pinned upholstered in linen accent chair offers support and comfor.jpg"
+                        alt="INTERIOR DESIGN"></div>
 
                 <div class="src_lt_bx">
 
                     <div class="src_lt_bx_in">
 
-                        <h2><span>Smart Home</span></h2>
+                        <h2><span>INTERIOR DESIGN</span></h2>
 
-                        <p>Whether adapting an existing space or designing one, the House of Anu Khatwani has a
-                            forward-thinking approach towards tech integrated spaces.</p>
+                        <p>Discerning spaces deserve bespoke interiors. Anu Khatwani combines visual dexterity with an unparalleled access to internationally renowned materials, craftsmanship and processes that result in striking and exceptional homes.</p>
 
-                        <p>Balancing both functionality, cost-value and user friendliness, our team holistically
-                            composes smart spaces that cater to diverse audiences and preferences.</p>
+                        <ul class="service-list">
+                            <li><strong>Residential</strong> — Bespoke home interiors that reflect your personal style</li>
+                            <li><strong>Commercial</strong> — Sophisticated spaces for offices, retail, and hospitality</li>
+                            <li><strong>Custom Projects</strong> — Tailored design solutions for unique requirements</li>
+                        </ul>
 
                     </div>
 
@@ -1009,151 +1004,27 @@ $(document).ready(function() {
 
 
 
-        <section class="section service_div1 box_direction" id="section">
+        <!-- DÉCOR Section -->
+        <section class="section service_div1 box_direction" id="DECOR">
 
             <div class="content-wrapper">
 
                 <div class="src_rt_bx"><img
                         src="services/A seamless blend of art and function, this intricately hand-carved wooden planter infuses nature.jpg"
-                        alt="Decor"></div>
+                        alt="DÉCOR"></div>
 
                 <div class="src_lt_bx">
 
                     <div class="src_lt_bx_in">
 
-                        <h2><span>Decor</span></h2>
+                        <h2><span>DÉCOR</span></h2>
 
-                        <p>From accents to accessories, the finishing touches highlight the soul of a space. We have an
-                            exclusive team of consultants who can help with commissioning or sourcing bespoke works
-                            including crystal chandeliers, precious display items, antiques and limited edition items.
-                        </p>
+                        <p>From accents to accessories, the finishing touches highlight the soul of a space. We have an exclusive team of consultants who can help with commissioning or sourcing bespoke works including crystal chandeliers, precious display items, antiques and limited edition items.</p>
 
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/Handcrafted with heart and purpose…Each curve and contour formed talks the story of textured det.jpg"
-                        alt="ARTISTRY"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>ARTISTRY</span></h2>
-
-                        <p>The House of Anu Khatwani sources art works that reflect the narrative of a space as well as
-                            curate its placement in accordance with the architecture, interiors and lighting.</p>
-
-                        <p>Leveraging a formal association with reputed art galleries, we engage in creating an art
-                            collection that extends the narrative of the home and its residents. The curatorial process
-                            includes vetting the right medium or style and commissioning original artwork from both
-                            emerging and established artists. The studio offers consultation and coveted access to
-                            international art channels to our most discerning clients.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/Delicate wooden petals stacked in perfect harmony, placed on a modern glass and wood console. Th.jpg"
-                        alt="LANDSCAPE DESIGN"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>LANDSCAPE DESIGN</span></h2>
-
-                        <p>With a special focus on bridging the gap between indoor and outdoor spaces, the House of Anu
-                            Khatwani, conceive landscape designs that are geologically as well as architecturally
-                            synchronized. This includes the execution of unique greenscapes such as tropical rainforests
-                            with lush water bodies, manicured gardens with classical fountains as well as the curation
-                            of outdoor artworks and design features.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/Where craftsmanship meets contemporary elegance…. This mirrored-top table, adorned with sculpted (1).jpg"
-                        alt="LIGHTING"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>LIGHTING</span></h2>
-
-                        <p>Lighting in many ways, is the nervous system of the home. Conjoining lighting design with
-                            architectural features and interior concepts is crucial to creating a synergetic space.</p>
-
-                        <p>Anu Khatwani applies her fusion of classically symmetric, yet experimentally bold, style to
-                            design exceptional customized chandeliers, which are manufactured in high-caliber materials
-                            by world-renowned studios. We align conception and execution with lighting design and
-                            placement to seamlessly amplify design elements.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="section service_div1 box_direction" id="section">
-
-            <div class="content-wrapper">
-
-                <div class="src_rt_bx"><img
-                        src="services/When nature takes form in design…. This handcrafted tiled top wooden centre table brings a touch (1).jpg"
-                        alt="TURNKEY EXECUTION"></div>
-
-                <div class="src_lt_bx">
-
-                    <div class="src_lt_bx_in">
-
-                        <h2><span>TURNKEY EXECUTION</span></h2>
-
-                        <p>Uniquely positioned to meet comprehensive demands from ideation and conception, to
-                            construction and decor, the House of Anu Khatwani is a one-stop studio. Our turnkey business
-                            model ensures that our clients receive articulate and cohesive results, better value for
-                            time and exceptional attention to detail.</p>
-
-                        <p>Our turnkey services seamlessly bridge the gap between conception, design and final build.
-                        </p>
+                        <ul class="service-list">
+                            <li><strong>Accent & Statement Pieces</strong> — Curated décor elements that elevate any space</li>
+                            <li><strong>Signature Pieces</strong> — Exclusive art-inspired creations with distinctive character</li>
+                        </ul>
 
                     </div>
 
@@ -1260,27 +1131,13 @@ $(document).ready(function() {
         </section>
     </div>
 
+    <!-- Fullpage.js disabled to prevent scroll flash -->
+    <!--
     <script type="text/javascript" src="front/js/fullpage.js"></script>
     <script type="text/javascript" src="front/js/examples.js"></script>
+    -->
     <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-            anchors: ['banner', 'ICONIC', 'INTERIOR', 'FURNITURE', 'SMART', 'DECOR', 'ARTISTRY', 'LANDSCAPE', 'LIGHTING', 'TURNKEY'],
-            menu: '#menu',
-            lazyLoad: true,
-            navigation: true,
-            navigationPosition: 'right',
-            responsiveWidth: 900,
-            afterResponsive: function (isResponsive) {
-
-            }
-
-        });
-        $(window).scroll(function () {
-            var scl = getActiveSection.length(0);
-            alert(scl);
-        })
-
+        // Fullpage.js removed - using normal scroll
     </script>
     <script>
         $(document).ready(function () {
