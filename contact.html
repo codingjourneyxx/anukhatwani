@@ -249,13 +249,16 @@ $(document).ready(function() {
         }
     });
 
-    // Prevent dropdown from closing when clicking inside it
-    $('.has-submenu .submenu').on('click', function(e) {
-        e.stopPropagation();
+    // Close menu popup when clicking submenu links
+    $('.has-submenu .submenu a').on('click', function() {
+        $('.global-menu').removeClass('global-menu-add');
+        $('.bragr_menu').removeClass('bragr_menu_Add');
+        $('.bgr_mn_cl').removeClass('menu_arrow_not');
+        $('body').removeClass('menu-open');
+        $('.has-submenu').removeClass('open');
     });
 });
 </script>
-
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP2XCHFS4S"></script>

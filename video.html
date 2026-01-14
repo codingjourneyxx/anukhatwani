@@ -244,9 +244,13 @@ $(document).ready(function() {
         }
     });
 
-    // Prevent submenu from closing when clicking inside it
-    $('.has-submenu .submenu').on('click', function(e) {
-        e.stopPropagation();
+    // Close menu popup when clicking submenu links
+    $('.has-submenu .submenu a').on('click', function() {
+        $('.global-menu').removeClass('global-menu-add');
+        $('.bragr_menu').removeClass('bragr_menu_Add');
+        $('.bgr_mn_cl').removeClass('menu_arrow_not');
+        $('body').removeClass('menu-open');
+        $('.has-submenu').removeClass('open');
     });
 });
 </script>

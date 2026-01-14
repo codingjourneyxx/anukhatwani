@@ -245,9 +245,27 @@ $(document).ready(function() {
         }
     });
 
-    // Prevent submenu from closing when clicking inside it
-    $('.has-submenu .submenu').on('click', function(e) {
-        e.stopPropagation();
+    // Close menu popup when clicking submenu links
+    $('.has-submenu .submenu a').on('click', function(e) {
+        var href = $(this).attr('href');
+        // Close the menu popup
+        $('.global-menu').removeClass('global-menu-add');
+        $('.bragr_menu').removeClass('bragr_menu_Add');
+        $('.hamburger').removeClass('hamburger--open');
+        $('.bgr_mn_cl').removeClass('menu_arrow_not');
+        $('body').removeClass('menu-open');
+        $('.has-submenu').removeClass('open');
+        // If it's an anchor link on the same page, smooth scroll
+        if(href.indexOf('#') !== -1 && href.indexOf('service.html') !== -1) {
+            e.preventDefault();
+            var target = href.split('#')[1];
+            setTimeout(function() {
+                var element = document.getElementById(target);
+                if(element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 300);
+        }
     });
 });
 </script>
