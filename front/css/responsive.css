@@ -1097,10 +1097,7 @@
     font-weight: 300;
     margin-bottom: 10px;
   }
-  .bragr_menu {
-    background: url(../images/navigation1024.jpg) no-repeat center center;
-    background-size: cover;
-  }
+
   p.phone a {
     font-size: 15px;
   }
@@ -1453,7 +1450,7 @@
   }
   .mga_menu_in {
     margin: 40px auto 0;
-    height: 60vh;
+    height: 100%;
     overflow: hidden;
     overflow-y: scroll;
   }
@@ -1463,7 +1460,6 @@
   }
   .overlay-box-div-left {
     width: 100%;
-    padding-left: 0;
     text-align: center;
   }
   .mega_right {
@@ -1643,6 +1639,25 @@
 }
 
 @media (max-width: 768px) {
+  .bragr_menu {
+    height: 100vh !important;
+    min-height: 100% !important;
+    overflow-y: auto;
+  }
+  .global-menu {
+    height: 100vh !important;
+    min-height: 100% !important;
+    overflow-y: auto;
+  }
+  .global-menu__wrap {
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 60px;
+  }
+  .contact_banner .bnr_tx h1 {
+    display: none;
+  }
   .ftr_bx1,
   .ftr_bx2,
   .ftr_bx3,
@@ -2157,10 +2172,7 @@
     font-size: 18px;
   }
 
-  .bragr_menu {
-    background: url(../images/navigation720.jpg) no-repeat center center;
-    background-size: cover;
-  }
+
   .Mobile_disNone {
     display: none;
   }
