@@ -835,6 +835,155 @@
             </div>
         </div>
     </section>
+    <!-- Clients Section -->
+    <style>
+        .home_clients {
+            padding: 80px 0;
+            background: #ffffff;
+            border-top: 3px solid #9f7e61;
+            border-bottom: 1px solid #ddd;
+        }
+        .home_clients h1 {
+            text-align: center;
+            font-size: 70px;
+            line-height: 78px;
+            margin-bottom: 20px;
+        }
+        .clients_intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .clients_intro p {
+            font-size: 18px;
+            color: #a18971;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .testimonials_slider {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .testimonial_item {
+            text-align: center;
+        }
+        .testimonial_item .quote_icon {
+            font-size: 48px;
+            color: #a18971;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        .testimonial_item blockquote {
+            font-size: 20px;
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        .testimonial_item .client_name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .testimonial_item .client_title {
+            font-size: 14px;
+            color: #a18971;
+            margin-top: 5px;
+        }
+        .testimonials_slider .owl-dots {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .testimonials_slider .owl-dot span {
+            width: 10px;
+            height: 10px;
+            background: #ddd;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .testimonials_slider .owl-dot.active span {
+            background: #a18971;
+        }
+        @media (max-width: 768px) {
+            .home_clients {
+                padding: 50px 0;
+            }
+            .home_clients h1 {
+                font-size: 55px;
+                line-height: 70px;
+            }
+            .clients_intro p {
+                font-size: 16px;
+            }
+            .testimonial_item blockquote {
+                font-size: 17px;
+            }
+            .testimonials_slider {
+                padding: 0 20px;
+            }
+        }
+        @media (max-width: 580px) {
+            .home_clients h1 {
+                font-size: 45px;
+                line-height: 46px;
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .home_clients h1 {
+                font-size: 30px;
+                line-height: 35px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+    <section class="home_clients" id="home_clients">
+        <h1>Clients</h1>
+        <div class="clients_intro">
+            <p>Favoured by celebrities and socialites, Anu Khatwani's creations go beyond furniture—sculpted narratives in wood, silk, crystal, and leather that elevate spaces with quiet sophistication.</p>
+        </div>
+        <div class="testimonials_slider owl-carousel" id="testimonials_slider">
+            <div class="testimonial_item">
+                <div class="quote_icon">"</div>
+                <blockquote>Anu's vision transformed our home into a masterpiece. Every piece tells a story, and the attention to detail is extraordinary.</blockquote>
+                <div class="client_name">Satisfied Client</div>
+                <div class="client_title">Homeowner, New Delhi</div>
+            </div>
+            <div class="testimonial_item">
+                <div class="quote_icon">"</div>
+                <blockquote>The fusion of traditional craftsmanship with contemporary design is unparalleled. Our space now reflects true luxury and elegance.</blockquote>
+                <div class="client_name">Happy Customer</div>
+                <div class="client_title">Interior Enthusiast</div>
+            </div>
+            <div class="testimonial_item">
+                <div class="quote_icon">"</div>
+                <blockquote>Working with A & MORE was a remarkable experience. The furniture pieces are not just functional—they are works of art.</blockquote>
+                <div class="client_name">Valued Client</div>
+                <div class="client_title">Art Collector, Mumbai</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $('#testimonials_slider').owlCarousel({
+                loop: true,
+                nav: false,
+                items: 1,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 800,
+                slideTransition: 'linear'
+            });
+        });
+    </script>
+
     <style>
         .portfolio_slider .portfolio_item img {
             width: 100%;
