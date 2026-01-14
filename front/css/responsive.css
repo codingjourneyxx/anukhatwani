@@ -1854,8 +1854,8 @@
     object-fit: cover;
   }
   .About_banner .bnr_rt_tx {
-    background: url(../images/abt_rt_img.jpg) no-repeat;
-    background-size: cover;
+    background: none;
+    background-size: unset;
   }
 
   .brands_scroll .bnr_rt_tx {
