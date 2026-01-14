@@ -18,6 +18,42 @@
 
   @import  url("../use.typekit.net/tcy8bdu.css");
 
+  /* Submenu Styles */
+  .overlay-box-div-left ul li.has-submenu {
+      position: relative;
+  }
+  .overlay-box-div-left ul li.has-submenu .submenu {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+  }
+  .overlay-box-div-left ul li.has-submenu.open .submenu {
+      display: block;
+  }
+  .overlay-box-div-left ul li.has-submenu .submenu li {
+      margin-bottom: 8px;
+  }
+  .overlay-box-div-left ul li.has-submenu .submenu li a {
+      font-size: 14px;
+      color: #999;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      letter-spacing: 1px;
+  }
+  .overlay-box-div-left ul li.has-submenu .submenu li a:hover {
+      color: #a18971;
+  }
+  .overlay-box-div-left ul li.has-submenu > .menu_border {
+      cursor: pointer;
+  }
+  .overlay-box-div-left ul li.has-submenu > .menu_border > a > .menu-span:after {
+      content: ' +';
+      font-size: 14px;
+  }
+  .overlay-box-div-left ul li.has-submenu.open > .menu_border > a > .menu-span:after {
+      content: ' −';
+  }
+
 </style>
 
 
@@ -64,6 +100,15 @@
 <script type="text/javascript" src="front/js/fotorama.js"></script>
 
 <script type="text/javascript" src="front/js/common.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.has-submenu > .menu_border').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+});
+</script>
 
 
 <!-- Google tag (gtag.js) -->
@@ -290,7 +335,31 @@
 
                             <li><span class="menu_border"><a href="about-us.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">About</span></a></span></li>
 
-                            <li><span class="menu_border"><a href="service.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">Services</span></a></span></li>
+                            <li class="has-submenu"><span class="menu_border"><a href="service.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">Furniture</span></a></span>
+                                <ul class="submenu">
+                                    <li><a href="service.html#SEATING">Seating</a></li>
+                                    <li><a href="service.html#TABLES">Tables & Surfaces</a></li>
+                                    <li><a href="service.html#STORAGE">Storage Pieces</a></li>
+                                    <li><a href="service.html#DINING">Dining</a></li>
+                                    <li><a href="service.html#BEDROOM">Bedroom</a></li>
+                                    <li><a href="service.html#CUSTOM">Custom Creations</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu"><span class="menu_border"><a href="service.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">Interior Design</span></a></span>
+                                <ul class="submenu">
+                                    <li><a href="service.html#RESIDENTIAL">Residential</a></li>
+                                    <li><a href="service.html#COMMERCIAL">Commercial</a></li>
+                                    <li><a href="service.html#CUSTOMPROJECTS">Custom Projects</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu"><span class="menu_border"><a href="service.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">Décor</span></a></span>
+                                <ul class="submenu">
+                                    <li><a href="service.html#ACCENT">Accent & Statement Pieces</a></li>
+                                    <li><a href="service.html#SIGNATURE">Signature Pieces</a></li>
+                                </ul>
+                            </li>
 
                             <li><span class="menu_border"><a href="portfolio.html" class="global-menu__item global-menu__item--demo-5"><span class="menu-span">Portfolio</span></a></span></li>
 
