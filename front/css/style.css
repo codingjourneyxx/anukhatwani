@@ -1275,7 +1275,6 @@ background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 248, 240,
     height: 100%;
     width: 404px;
     content: "";
-    background: url(../images/left_bg.png) no-repeat top left;
     z-index: 9;
     background-size: 100% 100%;
 }
@@ -1722,7 +1721,6 @@ ul#menu {
     height: 100%;
     width: 404px;
     content: "";
-    background: url(../images/left_bg2.png) no-repeat top left;
     z-index: 9;
     background-size: 100% 100%;
 }
