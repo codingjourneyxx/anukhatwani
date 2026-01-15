@@ -600,6 +600,8 @@ $(document).ready(function() {
         .menu {
             z-index: 9999999;
             display: none;
+              filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
         }
         @media (max-width: 768px) {
             body.beforeHide {
