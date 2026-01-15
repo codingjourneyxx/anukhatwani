@@ -1174,15 +1174,112 @@ $(document).ready(function() {
     </script>
 
     <style>
+        .home_portfolio {
+            padding: 80px 0;
+            background: #f9f7f5;
+            overflow: hidden;
+        }
+        .portfolio_slider {
+            padding: 40px 0;
+        }
+        .portfolio_slider .portfolio_item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        .portfolio_slider .portfolio_item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
         .portfolio_slider .portfolio_item img {
             width: 100%;
-            height: 500px;
+            height: 650px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .portfolio_slider .portfolio_item:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio_slider {
+            position: relative;
+        }
+        .portfolio_slider .owl-nav {
+            display: block;
+        }
+        .portfolio_slider .owl-nav .owl-prev,
+        .portfolio_slider .owl-nav .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(161, 137, 113, 0.9) !important;
+            border-radius: 50%;
+            color: #fff !important;
+            font-size: 20px !important;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .portfolio_slider .owl-nav .owl-prev {
+            left: 20px;
+        }
+        .portfolio_slider .owl-nav .owl-next {
+            right: 20px;
+        }
+        .portfolio_slider .owl-nav .owl-prev:hover,
+        .portfolio_slider .owl-nav .owl-next:hover {
+            background: #a18971 !important;
+        }
+        .portfolio_slider .owl-dots {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .portfolio_slider .owl-dot {
+            outline: none;
+            border: none;
+            background: transparent;
+            padding: 5px;
+        }
+        .portfolio_slider .owl-dot span {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border-radius: 50%;
+            display: block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .portfolio_slider .owl-dot:hover span {
+            background: #a18971;
+            transform: scale(1.2);
+        }
+        .portfolio_slider .owl-dot.active span {
+            width: 10px;
+            height: 10px;
+            background: #a18971;
+            border-radius: 50%;
+            transform: scale(1);
         }
         @media (max-width: 768px) {
             .portfolio_slider .portfolio_item img {
                 height: auto;
                 aspect-ratio: 9/16;
+            }
+            .portfolio_slider .owl-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px !important;
             }
         }
     </style>
@@ -1196,11 +1293,6 @@ $(document).ready(function() {
             </div>
             <div class="portfolio_item">
                 <img src="mediaimages/530451453_18475336726073342_8318070822960366779_n.jpg" alt="la maison"
-                    width="400px" height="400px">
-                </a>
-            </div>
-            <div class="portfolio_item">
-                <img src="mediaimages/531946069_981259720733921_2560504095448242317_n.jpg" alt="panther house"
                     width="400px" height="400px">
                 </a>
             </div>
@@ -1264,9 +1356,6 @@ $(document).ready(function() {
                     width="400px" height="400px">
                 </a>
             </div>
-        </div>
-        <div class="btn_div">
-            <a href="portfolio.html" class="sub_btn">View All <img src="front/images/View_icon.png" alt=""></a>
         </div>
     </section>
     <section class="home_insghits" id="home_insghits">
@@ -1381,26 +1470,29 @@ $(document).ready(function() {
             }
             $('#portfolio_slider').owlCarousel({
                 loop: true,
-                nav: true,
                 center: true,
-                items: 2.1,
-                margin: 70,
-                nav: false,
+                items: 2.5,
+                margin: 30,
+                nav: true,
+                navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
                 dots: true,
                 autoplay: true,
-                autoplayTimeout: 7000,
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                smartSpeed: 2000,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                slideTransition: 'ease-in-out',
                 responsive: {
                     0: {
-                        margin: 20
+                        items: 1.2,
+                        margin: 15
                     },
                     680: {
-                        margin: 50
+                        items: 1.8,
+                        margin: 20
                     },
                     980: {
-                        margin: 70
+                        items: 2.5,
+                        margin: 30
                     }
                 }
             });
