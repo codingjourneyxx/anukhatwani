@@ -54,7 +54,8 @@
 }
 .owl-carousel .owl-item img {
     display: block;
-    width: 100%;
+    object-fit: cover;
+    width: 10%;
 }
 .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
@@ -84,7 +85,7 @@
     padding: 0 !important;
     font: inherit;
     color: #fff;
-    font-size: 50px;
+    font-size: 20px;
     
 }
 .owl-carousel .owl-nav button.owl-next,
