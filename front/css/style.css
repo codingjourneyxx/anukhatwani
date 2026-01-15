@@ -119,9 +119,10 @@ display: flex;
     display: block;
     width: 35px;
     height: 35px;
-    box-shadow: inset 5px 5px 16px #9f7e61;
     border-radius: 50%;
+    border:#e9e9e9 1px solid;
     display: flex;
+    background-color: rgb(255, 244, 238);
     align-items: center;
     color: #91786d;
     justify-content: center;
@@ -289,6 +290,7 @@ sup{font-size:10px;margin-left:2px;}
 }
 .home_service {
     background: #ffffff;
+    border-top: 3px solid #a18971 ;
     padding-top: 40px;
 }
 
