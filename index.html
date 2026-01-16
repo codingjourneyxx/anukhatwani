@@ -619,6 +619,25 @@ $(document).ready(function() {
             background: #ffffff !important;
         }
 
+        /* Show logo in mega menu */
+        .global-menu .logo.global-menu__item {
+            visibility: visible !important;
+            transform: translateY(0) !important;
+            position: absolute;
+            top: 30px !important;
+            left: 30px;
+            width: auto;
+            text-align: left;
+        }
+        .global-menu .logo.global-menu__item a {
+            transform: scale(1) !important;
+            display: block;
+        }
+        .global-menu .logo.global-menu__item img {
+            width: 120px;
+            height: auto;
+        }
+
         /* Update menu text colors for white background */
         .overlay-box-div-left ul li a {
             color: #a18971 !important;
@@ -854,8 +873,8 @@ $(document).ready(function() {
         .menu {
             z-index: 9999999;
             display: none;
-              filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
+            filter: none;
+            transition: filter 0.3s ease;
         }
         @media (max-width: 768px) {
             body.beforeHide {
