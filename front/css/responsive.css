@@ -37,7 +37,7 @@
     width: 22%;
   }
   .home_brad_st_div1 .hmbrd__tx_rt {
-    padding-left: 22%;
+    padding-left: 10%;
   }
   .hmbrd__tx_rt .date_tx {
     font-size: 18px;
@@ -71,7 +71,7 @@
   }
   .home_brad_st_div2 .hmbrd__tx_lt {
     width: 54%;
-    padding-left: 20%;
+    padding-left: 5%;
   }
   section.home_service h1 {
     font-size: 100px;
@@ -170,7 +170,7 @@
     height: 622px;
   }
   .home_brad_st_div2 .hmbrd__tx_rt .ins_sl_bx_tx {
-    width: 544px;
+    width: 700px;
   }
   .hmbrd__tx_rt .ins_sl_bx_tx {
     width: 540px;
