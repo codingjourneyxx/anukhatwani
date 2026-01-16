@@ -638,6 +638,33 @@ $(document).ready(function() {
             width: 120px;
             height: auto;
         }
+        /* Add padding to menu content for logo space */
+        .global-menu .mga_menu_in {
+            padding-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .global-menu .logo.global-menu__item {
+                top: 20px !important;
+            }
+            .global-menu .logo.global-menu__item img {
+                width: 80px;
+            }
+            .global-menu .mga_menu_in {
+                padding-top: 100px;
+            }
+        }
+        @media (max-width: 480px) {
+            .global-menu .logo.global-menu__item {
+                top: 15px !important;
+            }
+            .global-menu .logo.global-menu__item img {
+                width: 60px;
+            }
+            .global-menu .mga_menu_in {
+                padding-top: 80px;
+            }
+        }
 
         /* Update menu text colors for white background */
         .overlay-box-div-left ul li a {
