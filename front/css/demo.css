@@ -946,7 +946,7 @@ background:url(../images/navigation.jpg) no-repeat center center; background-siz
     flex-wrap: wrap;
     position: relative;
     margin-top: 100px;
-    margin: 160px auto 0;
+    margin: 60px auto 0;
     justify-content: center;
 }
 .global-menu__wrap {
