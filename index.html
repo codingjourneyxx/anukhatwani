@@ -377,6 +377,7 @@ $(document).ready(function() {
         <div class="logo Homelogo"><a href="index.html" class="bnr_logo"><img src="/sitelogo.png"></a></div>
         <div class="menu bgr_mn_cl"><a href="javascript:;"><img src="front/images/menu.png"></a></div>
     </div>
+
     <div class="header_menu All_page">
         <div class="header_menu_bg"></div>
         <div class="aboutlogo"><a href="index.html" class="bnr_logo"><img src="sitelogo.png"></a></div>
@@ -459,29 +460,16 @@ $(document).ready(function() {
                             <div class="mega_right">
                                 <div class="add_bx">
                                     <h3>Contact Us</h3>
-                                    <p class="mga_phone">Phone: <a href="tel:+919821732676">+91 9821732676</a></p>
-                                    <p class="mga_phone">Email: <a href="mailto:anu_khatwani@hotmail.com">anu_khatwani@hotmail.com</a></p>
+                                    <p class="mga_phone"><span>Phone</span> <a href="tel:+919821732676">+91 9821732676</a></p>
+                                    <p class="mga_phone"><span>Email</span> <a href="mailto:anu_khatwani@hotmail.com">anu_khatwani@hotmail.com</a></p>
                                 </div>
                                 <div class="ftr2_bx2">
                                     <ul>
-                                        <li><a target="_blank" href="https://www.facebook.com/aparnakaushikofficial"
-                                                class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a target="_blank"
-                                                href="https://in.pinterest.com/aparnakaushikofficial/_created/"
-                                                class="pinterest"><i class="fa fa-pinterest-p"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a target="_blank" href="https://www.instagram.com/aparnakaushikofficial/"
-                                                class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li><a target="_blank"
-                                                href="https://www.youtube.com/channel/UCuAHlEJSdF9-gKPPQJseViQ"
-                                                class="youtube"><i class="fa fa-youtube-play"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a target="_blank"
-                                                href="https://www.linkedin.com/company/aparnakaushikofficial"
-                                                class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                        </li>
+                                        <li><a target="_blank" href="https://www.facebook.com/aparnakaushikofficial" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a target="_blank" href="https://in.pinterest.com/aparnakaushikofficial/_created/" class="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/aparnakaushikofficial/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a target="_blank" href="https://www.youtube.com/channel/UCuAHlEJSdF9-gKPPQJseViQ" class="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                        <li><a target="_blank" href="https://www.linkedin.com/company/aparnakaushikofficial" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -559,6 +547,271 @@ $(document).ready(function() {
         </div>
     </div>
     <style>
+        /* Hero Header Overlay Styles */
+        .hero-header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            pointer-events: none;
+        }
+        .hero-header-content {
+            text-align: center;
+            pointer-events: auto;
+        }
+        .hero-name {
+            font-size: 52px;
+            font-weight: 300;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+            animation: fadeInUp 1.5s ease-out 0.3s both;
+        }
+        .hero-tagline {
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+            animation: fadeInUp 1.5s ease-out 0.6s both;
+        }
+        .hero-cta {
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #a18971;
+            padding: 15px 40px;
+            transition: all 0.4s ease;
+            background: #a18971;
+            animation: fadeInUp 1.5s ease-out 0.9s both;
+        }
+        .hero-cta:hover {
+            background: #8a7461;
+            border-color: #8a7461;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mega Menu White Background Override */
+        .bragr_menu {
+            background: #ffffff !important;
+        }
+
+        /* Update menu text colors for white background */
+        .overlay-box-div-left ul li a {
+            color: #a18971 !important;
+        }
+        .overlay-box-div-left ul li a:hover {
+            color: #5c4a3d !important;
+        }
+        .overlay-box-div-left ul li a .menu-span {
+            color: #a18971;
+        }
+        .overlay-box-div-left ul li a:hover .menu-span {
+            color: #5c4a3d;
+        }
+        .mga_copy p {
+            color: #999 !important;
+        }
+
+        /* Mega Menu Right Section - Enhanced Authentic Style */
+        .mega_right .add_bx {
+            padding-left: 30px;
+        }
+        .mega_right .add_bx h3 {
+            font-size: 16px;
+            color: #a18971;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .mega_right .add_bx h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #a18971;
+        }
+        .mega_right .mga_phone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #333;
+        }
+        .mega_right .mga_phone span {
+            color: #888;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 50px;
+            margin-right: 15px;
+        }
+        .mega_right .mga_phone a {
+            color: #333;
+            font-size: 14px;
+            transition: 0.3s all ease;
+        }
+        .mega_right .mga_phone a:hover {
+            color: #a18971;
+        }
+        .mga_menu_in .ftr2_bx2 {
+            padding-left: 30px;
+            margin-top: 25px;
+        }
+        .mga_menu_in .ftr2_bx2 ul {
+            display: flex;
+            gap: 8px;
+        }
+        .mga_menu_in .ftr2_bx2 ul li {
+            margin: 0;
+        }
+        .mga_menu_in .ftr2_bx2 ul li a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(161, 137, 113, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a18971;
+            font-size: 14px;
+            transition: 0.3s all ease;
+            background: transparent;
+        }
+        .mga_menu_in .ftr2_bx2 ul li a:hover {
+            background: #a18971;
+            border-color: #a18971;
+            color: #fff;
+        }
+
+        /* Background Watermark Styles */
+        .background-watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.03;
+        }
+        .background-watermark img {
+            max-width: 600px;
+            height: auto;
+        }
+
+        /* Fixed Header Fixes */
+        header.fixed {
+            position: fixed;
+            top: -106px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            background: #ffffff;
+            height: 98px;
+            z-index: 99999;
+            border-bottom: 3px solid #9f7e61;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        header.fixed .logo1 {
+            float: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        header.fixed .logo1 a {
+            display: block;
+        }
+        header.fixed .logo1 img {
+            max-height: 80px;
+            width: auto;
+        }
+        header.fixed .menu1 {
+            float: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        header.fixed .menu1 img {
+            width: 30px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            header.fixed {
+                height: 70px;
+                padding: 0 15px;
+            }
+            header.fixed .logo1 img {
+                max-height: 55px;
+            }
+            header.fixed .menu1 img {
+                width: 25px;
+            }
+        }
+
+        /* Hero Header Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-name {
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+            .hero-tagline {
+                font-size: 14px;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+            }
+            .hero-cta {
+                font-size: 11px;
+                padding: 12px 30px;
+                letter-spacing: 2px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-name {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+            .hero-tagline {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+        }
+    </style>
+    <style>
         body {
             background: #ffffff;
         }
@@ -576,6 +829,7 @@ $(document).ready(function() {
         }
         .banner-home {
             background: #ffffff;
+            position: relative;
         }
         #home-banner .item img {
             width: 100%;
@@ -664,6 +918,14 @@ $(document).ready(function() {
         }
     </style>
     <div class="banner-home homepage-main-banner">
+        <!-- Hero Header Overlay -->
+        <div class="hero-header-overlay">
+            <div class="hero-header-content">
+                <h1 class="hero-name">Anu Khatwani</h1>
+                <div class="hero-tagline">A & MORE – Furniture Studio</div>
+                <a href="#home_brad_st" class="hero-cta">Discover More</a>
+            </div>
+        </div>
         <div id="home-banner" class="owl-carousel owl-theme">
             <div class="item"><img src="collov-home-design-Tk1pmgowG0w-unsplash.jpg"
                     class="zoomBannerImage bannerImage"></div>
@@ -709,7 +971,7 @@ $(document).ready(function() {
                     class="zoomBannerImage bannerImage"></div>
         </div>
     </div>
-    <section class="home_brad_st home_brad_st_div1">
+    <section class="home_brad_st home_brad_st_div1" id="home_brad_st">
         <div class="home_brad_lt Mobile_disNone">
             <span><img src="front/images/brand_bgsitelogo.png" alt=""></span>
         </div>
@@ -1583,6 +1845,17 @@ $(document).ready(function() {
             }
             // This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
             window.scrollTo(0, 0);
+
+            // Hero CTA smooth scroll
+            $('.hero-cta').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                if ($(target).length) {
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 1000);
+                }
+            });
         });
     </script>
     <script>
