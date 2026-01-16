@@ -210,6 +210,88 @@
     .mga_menu_in .ftr2_bx2 ul li a { width: 36px; height: 36px; border: 1px solid rgba(161, 137, 113, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #a18971; font-size: 14px; transition: 0.3s all ease; background: transparent; }
     .mga_menu_in .ftr2_bx2 ul li a:hover { background: #a18971; border-color: #a18971; color: #fff; }
 
+    /* Contact Info Block Styles */
+    .contact_info_block {
+        margin-top: 30px;
+    }
+    .contact_info_block h3 {
+        font-size: 24px;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .contact_info_block > p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .contact_info_block .email_in_bx {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact_info_block .email_tx {
+        margin-bottom: 25px;
+        display: block;
+        width: 100%;
+    }
+    .contact_info_block .email_tx p {
+        font-size: 12px;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    .contact_info_block .email_tx a {
+        font-size: 18px;
+        color: #a18971;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+    }
+    .contact_info_block .email_tx a:hover {
+        color: #5c4a3d;
+    }
+
+    /* Mobile alignment for contact left section */
+    @media (max-width: 768px) {
+        .cont_lt {
+            text-align: left !important;
+        }
+        .cont_lt h2 {
+            text-align: left !important;
+            margin: 0 !important;
+            margin-bottom: 15px !important;
+        }
+        .cont_lt h2 br {
+            display: none !important;
+        }
+        .contact_info_block {
+            text-align: left !important;
+        }
+        .contact_info_block p,
+        .contact_info_block .email_tx,
+        .contact_info_block .email_tx p,
+        .contact_info_block .email_tx a {
+            text-align: left !important;
+        }
+        .cont_social {
+            text-align: left !important;
+        }
+        .cont_social .ftr2_bx2 ul {
+            justify-content: flex-start !important;
+        }
+        .contact_info_block .email_in_bx {
+            margin: 0 !important;
+        }
+        .contact_info_block .email_tx {
+            margin: 0 !important;
+            margin-bottom: 10px !important;
+        }
+    }
+
 </style>
 
 
@@ -777,18 +859,20 @@ $(document).ready(function() {
 
             <div class="cont_lt">
 
-                <h2>Our<span></span><br>Contacts</h2>
+                <h2>Our<span></span> <br>Contacts</h2>
 
-                <div class="map_img">
-
-                    <a target="_blank" href="https://www.google.com/maps/place/Aparna+Kaushik/@28.5722007,77.2276107,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce250baa6e0bd:0xbdb57aae2d1d4cc9!8m2!3d28.5722007!4d77.2297994">
-
-                        <span><img src="front/images/cont_map.png" alt="" class="cont_map"></span>
-
-                        <h4 class="look_tx">FIND US</h4>
-
-                    </a>
-
+                <div class="contact_info_block">
+                    <p>For enquiries and collaboration</p>
+                    <div class="email_in_bx">
+                        <div class="email_tx">
+                            <p>Phone</p>
+                            <a href="tel:+919821732676" class="Cont_no">+91 9821732676</a>
+                        </div>
+                        <div class="email_tx">
+                            <p>Email</p>
+                            <a href="mailto:anu_khatwani@hotmail.com">anu_khatwani@hotmail.com</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="cont_social">
@@ -818,34 +902,7 @@ $(document).ready(function() {
             <div class="cont_rt">
 
 
-                <div class="email_bx">
-
-                    <h3>Contact Us</h3>
-
-                    <p>For enquiries and collaboration</p>
-
-                    <div class="email_in_bx">
-
-                        <div class="email_tx">
-
-                            <p>Phone</p>
-
-                            <a href="tel:+919821732676" class="Cont_no">+91 9821732676</a>
-
-                        </div>
-
-                        <div class="email_tx">
-
-                            <p>Email</p>
-
-                            <a href="mailto:anu_khatwani@hotmail.com">anu_khatwani@hotmail.com</a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+                
                 <div class="cont_form">
 
                     <div id="result" class="alert alert-success alert-dismissible" style="display:none"></div>

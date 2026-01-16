@@ -1567,7 +1567,7 @@ h4.look_tx {
 }
 .email_in_bx .email_tx {
     width: 50%;
-    margin-bottom: 42px;
+    margin-bottom: 25px;
 }
 .email_in_bx {
     display: flex;
