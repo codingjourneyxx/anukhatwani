@@ -908,6 +908,14 @@ section#section11 {
     line-height: 23px;
     margin-bottom: 21px;
 }
+.hmbrd__tx_rt .intro-text {
+    font-size: 15px;
+    line-height: 24px;
+    font-style: italic;
+    color: #a18971;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
 .home_brad_st_div2 {
     flex-direction: row-reverse;
     padding-top: 30px;

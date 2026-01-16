@@ -737,6 +737,7 @@ $(document).ready(function() {
                         <h2 class="section_heading">Brand Story</h2>
                         <h1 class="btn_border Mobile_disNone ytr56 homepage-about-brand-title">A & MORE</h1>
                         <div class="date_tx">FURNITURE STUDIO</div>
+                        <p class="intro-text">A & MORE is the creative extension of Anu Khatwani's design philosophy where craftsmanship, culture, and contemporary living intersect.</p>
                         <p>At A & MORE, furniture is where heritage craftsmanship meets contemporary design. Rooted in time-honoured techniques and reimagined through bold, art-inspired forms, each piece is meticulously handcrafted by skilled artisans using solid wood, refined finishes, and thoughtful detailing.</p>
                         <p>Inspired by antique motifs yet shaped for modern living, our collections transform furniture into sculptural statements—where beauty, function, and storytelling coexist. Designed to elevate spaces, every creation reflects a balance of soul, structure, and innovation.</p>
                         <p>A & MORE is more than a design studio—it is a philosophy. A celebration of heritage and innovation, where every creation reflects refined taste, thoughtful craftsmanship, and soulful living.</p>
@@ -745,46 +746,187 @@ $(document).ready(function() {
             </div>
         </div>
     </section>
-    <section class="home_brad_st home_brad_st_div2">
-        <div class="home_brad_lt Mobile_disNone">
-            <span><img src="" alt=""></span>
-        </div>
-        <div class="home_brad_rt Mobile_disNone">
-            <span><img src="/Untitled design (2).png" alt=""></span>
-        </div>
-        <div class="Mobile_disBlk">
-            <span><img src="/Untitled design (2).png" alt=""></span>
-            <div class="hmbrd_po Mobile_Pos">
-                <h1 class="btn_border">About</h1>
-                <div class="hmbrd__tx">
-                    <div class="hmbrd__tx_lt">
-                        <h4>" My designs are sincere, natural and unforced! "</h4>
+    <!-- About Section Redesigned -->
+    <section class="about_section">
+        <div class="container">
+            <div class="about_wrapper">
+                <div class="about_image_col">
+                    <div class="about_image_wrapper">
+                        <img src="/Untitled design (2) (1).png" alt="Anu Khatwani">
+                        <div class="about_quote_overlay">
+                            <span>" Blending global design with Indian heritage "</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="hmbrd_po Mo_hetAuto">
-            <h1 class="btn_border Mobile_disNone">About</h1>
-            <a href="about-us.html" class="discover_link desktop_only">Discover Anu's Journey</a>
-            <div class="hmbrd__tx">
-                <div class="hmbrd__tx_rt">
-                    <div class="ins_sl_bx_tx">
-                        <h4>Founder & Creative Director</h4>
-                        <p class="pri_big_tx">Anu Khatwani is a visionary entrepreneur and interior designer, Founder and creative force behind A & MORE—a distinguished design studio known for its fusion of classical and contemporary furniture, handcrafted décor, and art-led interiors.</p>
+                <div class="about_content_col">
+                    <div class="about_content_inner">
+                        <h2 class="section_heading">About</h2>
+                        <h1 class="about_title">Anu Khatwani</h1>
+                        <div class="about_subtitle">Founder & Creative Director</div>
+                        <p class="about_intro">Anu Khatwani is a visionary entrepreneur and interior designer, Founder and creative force behind A & MORE—a distinguished design studio known for its fusion of classical and contemporary furniture, handcrafted décor, and art-led interiors.</p>
                         <p>Her work seamlessly blends global design sensibilities with the richness of Indian heritage, resulting in creations that are timeless, sculptural, and deeply expressive.</p>
                         <p>With a strong academic foundation, she earned a degree in Interior Design from Parsons School of Design, New York, and graduated first-class in Business Management. This rare combination of artistic excellence and strategic acumen allows her to approach design with both creative depth and business precision.</p>
-                        <p>Anu's work has been showcased in leading fashion and lifestyle publications. Through curated previews and exclusive interior events, she brings emerging design trends to industry professionals and design connoisseurs alike. She is also actively developing a personal label aimed at taking Indian fusion furniture to a global audience.</p>
-                        <p>Beyond her creative pursuits, she is a dedicated social worker, driven by a desire to give back and create meaningful impact.</p>
-                        <a href="about-us.html" class="discover_link mobile_only">Discover Anu's Journey</a>
+                        <p class="about_last_para">Beyond her creative pursuits, she is a dedicated social worker, driven by a desire to give back and create meaningful impact.</p>
+                        <a href="about-us.html" class="about_cta">Discover Anu's Journey</a>
                     </div>
-                </div>
-                <div class="hmbrd__tx_lt Mobile_disNone dfghjhg">
-                    <h4>" Blending global design with Indian heritage "</h4>
                 </div>
             </div>
         </div>
     </section>
     <style>
+        /* About Section Styles */
+        .about_section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .about_wrapper {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        .about_image_col {
+            flex: 0 0 38%;
+            max-width: 38%;
+        }
+        .about_image_wrapper {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        .about_image_wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .about_quote_overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #a18971;
+            padding: 20px 25px;
+        }
+        .about_quote_overlay span {
+            font-size: 18px;
+            font-style: italic;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+        .about_content_col {
+            flex: 0 0 58%;
+            max-width: 58%;
+        }
+        .about_content_inner {
+            padding-left: 0;
+        }
+        .about_content_inner .section_heading {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #a18971;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        .about_title {
+            font-size: 42px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .about_title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 1px;
+            background: #a18971;
+        }
+        .about_subtitle {
+            font-size: 16px;
+            color: #a18971;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+        .about_tagline {
+            font-size: 15px;
+            line-height: 26px;
+            color: #a18971;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+        .about_intro {
+            font-size: 15px;
+            line-height: 26px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .about_content_inner p {
+            font-size: 13px;
+            line-height: 22px;
+            color: #555;
+            margin-bottom: 15px;
+            font-weight: 300;
+            font-family: 'FuturaLT';
+        }
+        .about_last_para {
+            margin-bottom: 30px !important;
+        }
+        .about_cta {
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a18971;
+            text-decoration: none;
+            border: 1px solid #a18971;
+            padding: 14px 30px;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        .about_cta:hover {
+            background: #a18971;
+            color: #fff;
+        }
+
+        /* About Section Mobile */
+        @media (max-width: 991px) {
+            .about_wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .about_image_col,
+            .about_content_col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .about_content_inner {
+                padding-left: 0;
+                text-align: center;
+            }
+            .about_title:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .about_section {
+                padding: 50px 0;
+            }
+            .about_title {
+                font-size: 32px;
+            }
+        }
+
         .service_bx_in span img {
             width: 100%;
             height: 580px;
@@ -827,19 +969,22 @@ $(document).ready(function() {
             font-weight: 400;
         }
         .discover_link {
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #9f7e61;
+            color: #a18971;
             text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: 400;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid #a18971;
+            padding: 12px 25px;
         }
         .discover_link:hover {
-            color: #333;
-            text-decoration: underline;
+            background: #a18971;
+            color: #fff;
+            text-decoration: none;
         }
         .discover_link.mobile_only {
             display: none;
@@ -1596,7 +1741,7 @@ $(document).ready(function() {
                             class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-            <img src="footerlogo.png" alt="Footer Logo" class="footer-logo"
+            <img src="footerlogo.jpg" alt="Footer Logo" class="footer-logo"
                 style="height: 40px; width: auto; border-radius: 5px;">
         </div>
     </div>

@@ -1747,7 +1747,7 @@
     height: auto;
     display: flex;
     padding: 10px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .ftr2_bx2 {
     margin: 10px 0;
