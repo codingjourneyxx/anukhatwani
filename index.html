@@ -873,9 +873,14 @@ $(document).ready(function() {
     <style>
         html, body {
             background: #ffffff;
+            overflow-x: hidden;
+            max-width: 100vw;
         }
         body {
             overflow: hidden;
+        }
+        body.beforeHide {
+            overflow-x: hidden;
         }
         body.beforeHide {
             overflow: inherit;
@@ -1350,11 +1355,38 @@ $(document).ready(function() {
             left: 50%;
             transform: translateX(-50%);
             width: 700px;
+            max-width: 90vw;
             height: 2.5px;
             background: #a18971;
         }
         .sr_ml_tx {
             text-align: center;
+        }
+        @media (max-width: 768px) {
+            .sr_ml_tx h1::after {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+        /* Mobile overflow fixes */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        section, .container, .containner_full {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        /* Service boxes - 1 column on mobile */
+        @media (max-width: 767px) {
+            .service_bx {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
         }
     </style>
     <section class="home_service">
@@ -1581,6 +1613,7 @@ $(document).ready(function() {
         }
         .testimonial_item .client_image {
             width: 300px;
+            max-width: 90%;
             height: 110px;
             border-radius: 10px;
             object-fit: cover;
