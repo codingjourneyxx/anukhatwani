@@ -871,7 +871,7 @@ $(document).ready(function() {
         }
     </style>
     <style>
-        body {
+        html, body {
             background: #ffffff;
         }
         body {
@@ -1891,8 +1891,6 @@ $(document).ready(function() {
             </div>
         </div>
     </section>
-    <section class="home_insghits" id="home_insghits">
-    </section>
     <script>
         $(document).ready(function () {
             $('.Videos_bg video').prop('muted', true);
@@ -2053,20 +2051,13 @@ $(document).ready(function() {
             autoplaySpeed: 2000,
         });
         $(window).scroll(function () {
-            //for (var i = 1; i < $('#nav li').length; i++) {
-            if ($(window).scrollTop() > $('#home_insghits').position().top) {
+            if ($(window).scrollTop() > $('#home_clients').position().top) {
                 $('.left_social').addClass('left_social_Add');
-                $('.left_social').addClass('left_social_Add');
-            } else {
-                $('.left_social').removeClass('left_social_Add');
-                $('.left_social').removeClass('left_social_Add');
-            }
-            if ($(window).scrollTop() > $('#home_insghits').position().top) {
                 $('.enq').addClass('enq_Add');
             } else {
+                $('.left_social').removeClass('left_social_Add');
                 $('.enq').removeClass('enq_Add');
             }
-            //}; 
         })
     </script>
     <footer>
