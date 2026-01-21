@@ -1340,28 +1340,12 @@ $(document).ready(function() {
         }
         .sr_ml_tx h1 {
             color: #a18971 !important;
-            position: relative;
             display: inline-block;
-        }
-        .sr_ml_tx h1::after {
-            content: '';
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 700px;
-            height: 2.5px;
-            background: #a18971;
+            border-bottom: 2.5px solid #a18971;
+            padding-bottom: 10px;
         }
         .sr_ml_tx {
             text-align: center;
-        }
-        @media (max-width: 768px) {
-            .sr_ml_tx h1::after {
-                width: 90%;
-                max-width: 300px;
-            }
         }
     </style>
     <section class="home_service">
