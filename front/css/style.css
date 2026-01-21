@@ -295,7 +295,7 @@ sup{font-size:10px;margin-left:2px;}
 }
 
 .sr_ml_tx {
-    max-width: 784px;
+    max-width: 860px;
     text-align: center;
     margin: 0 auto 26px;
 }
@@ -2635,6 +2635,7 @@ section.home_service p {
     color: #555555;
     line-height: 20px;
     font-weight: 300;
+    padding-top: 4px;
     font-family: 'FuturaLT';
 }
 
