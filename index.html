@@ -873,14 +873,9 @@ $(document).ready(function() {
     <style>
         html, body {
             background: #ffffff;
-            overflow-x: hidden;
-            max-width: 100vw;
         }
         body {
             overflow: hidden;
-        }
-        body.beforeHide {
-            overflow-x: hidden;
         }
         body.beforeHide {
             overflow: inherit;
@@ -899,11 +894,6 @@ $(document).ready(function() {
             width: 100%;
             height: 100vh;
             object-fit: cover;
-        }
-        @media (max-width: 768px) {
-            #home-banner .item img {
-                height: 90vh;
-            }
         }
         .header_menu_bg {
             position: fixed;
@@ -990,7 +980,7 @@ $(document).ready(function() {
         <!-- Hero Header Overlay -->
         <div class="hero-header-overlay">
             <div class="hero-header-content">
-                <h2 class="hero-name">Anu Khatwani</h2>
+                <h1 class="hero-name">Anu Khatwani</h1>
                 <div class="hero-tagline">Furniture Studio</div>
                 <a href="#home_brad_st" class="hero-cta">Discover More</a>
             </div>
@@ -1068,7 +1058,7 @@ $(document).ready(function() {
                         <h2 class="section_heading">Brand Story</h2>
                         <h1 class="btn_border Mobile_disNone ytr56 homepage-about-brand-title">A & MORE</h1>
                         <div class="date_tx">FURNITURE STUDIO</div>
-                        <p>A & MORE is the creative extension of Anu Khatwani's design philosophy where craftsmanship, culture, and contemporary living intersect.</p>
+                        <p class="intro-text">A & MORE is the creative extension of Anu Khatwani's design philosophy where craftsmanship, culture, and contemporary living intersect.</p>
                         <p>At A & MORE, furniture is where heritage craftsmanship meets contemporary design. Rooted in time-honoured techniques and reimagined through bold, art-inspired forms, each piece is meticulously handcrafted by skilled artisans using solid wood, refined finishes, and thoughtful detailing.</p>
                         <p>Inspired by antique motifs yet shaped for modern living, our collections transform furniture into sculptural statements—where beauty, function, and storytelling coexist. Designed to elevate spaces, every creation reflects a balance of soul, structure, and innovation.</p>
                         <p>A & MORE is more than a design studio—it is a philosophy. A celebration of heritage and innovation, where every creation reflects refined taste, thoughtful craftsmanship, and soulful living.</p>
@@ -1302,6 +1292,9 @@ $(document).ready(function() {
         .date_tx {
             color: #555555 !important;
         }
+        .intro-text {
+            color: #555555 !important;
+        }
         .hmbrd__tx_lt h4 {
             color: #333333 !important;
         }
@@ -1357,38 +1350,11 @@ $(document).ready(function() {
             left: 50%;
             transform: translateX(-50%);
             width: 700px;
-            max-width: 90vw;
             height: 2.5px;
             background: #a18971;
         }
         .sr_ml_tx {
             text-align: center;
-        }
-        @media (max-width: 768px) {
-            .sr_ml_tx h1::after {
-                width: 80%;
-                max-width: 300px;
-            }
-        }
-        /* Mobile overflow fixes */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        section, .container, .containner_full {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        /* Service boxes - 1 column on mobile */
-        @media (max-width: 767px) {
-            .service_bx {
-                width: 100% !important;
-                flex: 0 0 100% !important;
-                max-width: 100% !important;
-            }
         }
     </style>
     <section class="home_service">
@@ -1615,7 +1581,6 @@ $(document).ready(function() {
         }
         .testimonial_item .client_image {
             width: 300px;
-            max-width: 90%;
             height: 110px;
             border-radius: 10px;
             object-fit: cover;
