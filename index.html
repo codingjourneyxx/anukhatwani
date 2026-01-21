@@ -571,6 +571,7 @@ $(document).ready(function() {
             text-transform: uppercase;
             letter-spacing: 8px;
             margin: 0 0 10px 0;
+            padding-bottom: 20px;
             text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
             animation: fadeInUp 1.5s ease-out 0.3s both;
         }
@@ -889,11 +890,25 @@ $(document).ready(function() {
         .banner-home {
             background: #ffffff;
             position: relative;
+            height: 100vh;
+            min-height: 600px;
+            max-height: 1080px;
+            overflow: hidden;
+        }
+        #home-banner, #home-banner .owl-stage-outer, #home-banner .owl-stage, #home-banner .owl-item, #home-banner .item {
+            height: 100%;
         }
         #home-banner .item img {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .banner-home {
+                height: 90vh;
+                min-height: 500px;
+                max-height: 800px;
+            }
         }
         .header_menu_bg {
             position: fixed;
@@ -980,7 +995,7 @@ $(document).ready(function() {
         <!-- Hero Header Overlay -->
         <div class="hero-header-overlay">
             <div class="hero-header-content">
-                <h1 class="hero-name">Anu Khatwani</h1>
+                <h2 class="hero-name">Anu Khatwani</h2>
                 <div class="hero-tagline">Furniture Studio</div>
                 <a href="#home_brad_st" class="hero-cta">Discover More</a>
             </div>
@@ -1081,8 +1096,7 @@ $(document).ready(function() {
                 </div>
                 <div class="about_content_col">
                     <div class="about_content_inner">
-                        <h2 class="section_heading">About</h2>
-                        <h1 class="about_title">Anu Khatwani</h1>
+                        <h1 class="about_title">About Anu Khatwani</h1>
                         <div class="about_subtitle">Founder & Creative Director</div>
                         <p class="about_intro">Anu Khatwani is a visionary entrepreneur and interior designer, Founder and creative force behind A & MORE—a distinguished design studio known for its fusion of classical and contemporary furniture, handcrafted décor, and art-led interiors.</p>
                         <p>Her work seamlessly blends global design sensibilities with the richness of Indian heritage, resulting in creations that are timeless, sculptural, and deeply expressive.</p>
@@ -1352,9 +1366,7 @@ $(document).ready(function() {
         <div class="containner_full">
             <div class="sr_ml_tx">
                 <h1>What we create</h1>
-                <p class="pri_big_tx">Working across disciplines of Furniture, Interior Design, and Decor, the dedicated team at the design house, led by the immaculately
-                    polished style sense of Anu Khatwani herself, conceive and execute synergistic, forward-thinking and
-                    visually striking projects.</p>
+                <p class="pri_big_tx">We create sculptural, comfort furniture—from seating, tables, storage, dining and bedroom pieces to fully bespoke custom creations crafted for your space. Our interior design services span residential and commercial projects, thoughtfully tailored to reflect your lifestyle or brand identity. We also curate décor and signature statement pieces that elevate spaces with artful detail and a distinct aesthetic!</p>
             </div>
 
             <!-- Furniture Category -->
@@ -1722,7 +1734,6 @@ $(document).ready(function() {
             padding: 80px 0;
             background: #f9f7f5;
             overflow: hidden;
-            display: none;
         }
         .portfolio_slider {
             padding: 40px 0;
@@ -1829,7 +1840,7 @@ $(document).ready(function() {
         }
     </style>
     <section class="home_portfolio" id="home_portfolio">
-        <h1 class="center">Portfolio</h1>
+        <h1 class="center">Gallery</h1>
         <div class="portfolio_slider owl-carousel" id="portfolio_slider">
             <div class="portfolio_item">
                 <img src="mediaimages/554297418_18483509911073342_2664465457516844630_n.jpg" alt="the oasis"
@@ -1905,6 +1916,15 @@ $(document).ready(function() {
     </section>
     <script>
         $(document).ready(function () {
+            // Fix banner height on page load to prevent zoom issues
+            var bannerHeight = $(window).height();
+            if ($(window).width() <= 768) {
+                bannerHeight = Math.min(Math.max(bannerHeight * 0.9, 500), 800);
+            } else {
+                bannerHeight = Math.min(Math.max(bannerHeight, 600), 1080);
+            }
+            $('.banner-home').css('height', bannerHeight + 'px');
+
             $('.Videos_bg video').prop('muted', true);
             $('.logo a').css({
                 'transform': 'scale(1)',
