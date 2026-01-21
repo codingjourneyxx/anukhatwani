@@ -297,7 +297,7 @@ sup{font-size:10px;margin-left:2px;}
 .sr_ml_tx {
     max-width: 860px;
     text-align: center;
-    margin: 0 auto 26px;
+    margin: 0 auto 50px;
 }
 .service_bx img {
     width: 100%;
@@ -834,9 +834,9 @@ section#section11 {
 }
 .btn_border:before {
     position: absolute;
-    left: 5px;
+    left: 0px;
     bottom: 0;
-    width: 70%;
+    width: 65%;
     height: 1px;
     background: #a18971;
     content: "";
@@ -880,7 +880,7 @@ section#section11 {
     text-align: left;
     position: relative;
     margin: -11px 0 0 0;
-    width: 380px;
+    width: 450px;
 }
 .hmbrd__tx_rt .sub_btn {
     font-size: 12px;
