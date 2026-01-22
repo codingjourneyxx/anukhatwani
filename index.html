@@ -1890,6 +1890,178 @@ $(document).ready(function() {
             </div>
         </div>
     </section>
+
+    <!-- Press & Articles Section -->
+    <style>
+        .home_press {
+            padding: 80px 0;
+            background: #f9f7f5;
+        }
+        .home_press h1 {
+            text-align: center;
+            font-size: 42px;
+            color: #333;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .press_container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .press_grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .press_card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 350px;
+            flex: 1;
+            min-width: 280px;
+        }
+        .press_card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        .press_card_img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        .press_card_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .press_card:hover .press_card_img img {
+            transform: scale(1.05);
+        }
+        .press_card_content {
+            padding: 25px;
+        }
+        .press_card_date {
+            font-size: 12px;
+            color: #a18971;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .press_card_content h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 12px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .press_card_content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .press_card_link {
+            color: #a18971;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+        .press_card_link:hover {
+            color: #5c4a3d;
+        }
+        .press_view_all {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .press_view_all a {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid #a18971;
+            color: #a18971;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .press_view_all a:hover {
+            background: #a18971;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .home_press {
+                padding: 50px 0;
+            }
+            .home_press h1 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            .press_grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .press_card {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <section class="home_press" id="press">
+        <div class="press_container">
+            <h1>Press & Articles</h1>
+            <div class="press_grid">
+                <div class="press_card">
+                    <div class="press_card_img">
+                        <img src="mediaimages/554297418_18483509911073342_2664465457516844630_n.jpg" alt="Article 1">
+                    </div>
+                    <div class="press_card_content">
+                        <div class="press_card_date">January 2025</div>
+                        <h3>Crafting Timeless Spaces: A Design Philosophy</h3>
+                        <p>Exploring the intersection of traditional craftsmanship and contemporary aesthetics in luxury interior design.</p>
+                        <a href="press.html" class="press_card_link">Read More →</a>
+                    </div>
+                </div>
+                <div class="press_card">
+                    <div class="press_card_img">
+                        <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Article 2">
+                    </div>
+                    <div class="press_card_content">
+                        <div class="press_card_date">December 2024</div>
+                        <h3>The Art of Bespoke Furniture Design</h3>
+                        <p>How handcrafted furniture pieces transform living spaces into curated works of art.</p>
+                        <a href="press.html" class="press_card_link">Read More →</a>
+                    </div>
+                </div>
+                <div class="press_card">
+                    <div class="press_card_img">
+                        <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Article 3">
+                    </div>
+                    <div class="press_card_content">
+                        <div class="press_card_date">November 2024</div>
+                        <h3>Sustainable Luxury: Design for the Future</h3>
+                        <p>Embracing eco-conscious materials while maintaining the elegance of luxury design.</p>
+                        <a href="press.html" class="press_card_link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="press_view_all">
+                <a href="press.html">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
     <script>
         $(document).ready(function () {
             // Fix banner height on page load to prevent zoom issues
