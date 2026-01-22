@@ -1813,9 +1813,9 @@
     margin-bottom: 20px;
   }
   .service_bx {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
   .sr_tx h3 {
     font-size: 17px;
@@ -2623,6 +2623,15 @@
   }
   header .menu1 {
     padding-top: 16px;
+  }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 576px) and (max-width: 768px) {
+  .service_bx {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
