@@ -313,34 +313,13 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    //sessionStorage.setItem('firstVisit', '1');  
+    //sessionStorage.setItem('firstVisit', '1');
+    // Removed 5-second delay - banner now shows immediately
+    $('.Videos_bg').css({'opacity':'0','visibility':'hidden'});
+    $("#home-banner").css({'visibility':'visible'});
 
-    if (sessionStorage.getItem('firstVisit') !=1)
-
-    {
-
-        //$('.Videos_bg').css({'opacity':'1','visibility':'visible', 'display':'flex'});
-
-        $("#home-banner").css({'visibility':'hidden'});
-
-        sessionStorage.setItem('firstVisit', '1'); 
-
-        setTimeout(function () {
-
-            $('.Videos_bg').css({'opacity':'0','visibility':'hidden'});
-
-            $("#home-banner").css({'visibility':'visible'});
-
-           //  window.location.reload();
-
-        }, 5000); 
-
-    }else{
-
-        $('.Videos_bg').css({'opacity':'0','visibility':'hidden'});
-
-        // alert(sessionStorage.getItem('firstVisit'));
-
+    if (sessionStorage.getItem('firstVisit') != 1) {
+        sessionStorage.setItem('firstVisit', '1');
     }
 
   // $(window).load(function(){
