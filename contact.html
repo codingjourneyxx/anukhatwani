@@ -37,12 +37,67 @@
         }
     }
 
-    /* Contact Header Style */
-    .contact_div h1 {
+    /* Contact Page Header */
+    .contact_header {
+        padding-top: 200px;
+        padding-bottom: 15px;
+        text-align: center;
+        background: #fff;
+    }
+
+    .contact_header h1 {
         color: #a18971;
-        text-decoration: underline;
-        text-underline-offset: 8px;
-        text-decoration-thickness: 2px;
+        font-size: 48px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 15px;
+        display: inline-block;
+        border-bottom: 2px solid #a18971;
+    }
+
+    @media (max-width: 768px) {
+        .contact_header {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .contact_header h1 {
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+    }
+
+    /* Dark Text Contact Form Styles */
+    .cont_rt .cont_form h3 {
+        color: #1a1a1a;
+    }
+
+    .cont_rt .cont_form .form-control {
+        color: #1a1a1a;
+        border-color: #333;
+    }
+
+    .cont_rt .cont_form .form-control::placeholder {
+        color: #333;
+    }
+
+    .cont_rt .cont_form .form-control:focus {
+        border-color: #a18971;
+        color: #1a1a1a;
+    }
+
+    .cont_rt .cont_form .sub_btn {
+        background: #444;
+        color: #ffffff;
+        width: 100%;
+        display: block;
+        padding: 15px;
+    }
+
+    .cont_rt .cont_form .sub_btn:hover {
+        background: #555;
     }
 </style>
 
@@ -854,6 +909,11 @@ $(document).ready(function() {
 
 
 
+
+<!-- Contact Header -->
+<div class="contact_header">
+    <h1>Contact</h1>
+</div>
 
 <section class="contact_scn" id="contact_div">
 
