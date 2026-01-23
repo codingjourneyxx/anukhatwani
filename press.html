@@ -912,6 +912,78 @@
 
 
         <style>
+            /* Lightbox Styles */
+            .lightbox-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 9999;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+            .lightbox-overlay.active {
+                display: flex;
+            }
+            .lightbox-content {
+                max-width: 90%;
+                max-height: 90%;
+                position: relative;
+            }
+            .lightbox-content img {
+                max-width: 100%;
+                max-height: 90vh;
+                border-radius: 8px;
+                box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            }
+            .lightbox-close {
+                position: absolute;
+                top: -40px;
+                right: 0;
+                color: #fff;
+                font-size: 30px;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .lightbox-close:hover {
+                color: #a18971;
+            }
+            .lightbox-prev, .lightbox-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                font-size: 50px;
+                cursor: pointer;
+                padding: 20px;
+                user-select: none;
+                z-index: 10001;
+                transition: color 0.3s ease;
+            }
+            .lightbox-prev {
+                left: 20px;
+            }
+            .lightbox-next {
+                right: 20px;
+            }
+            .lightbox-prev:hover, .lightbox-next:hover {
+                color: #a18971;
+            }
+            .article_images a {
+                cursor: pointer;
+            }
+            .article_images a img:hover {
+                transform: scale(1.03);
+            }
+
             @media(max-width:768px) {
 
                 .Portfolio_headr .menu.bgr_mn_cl {
@@ -1198,6 +1270,8 @@
                         <!-- Media Content -->
                         <div class="media-content-section" style="padding: 20px 0;">
 
+                            <h2 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 40px; font-weight: 300; letter-spacing: 2px;">Media</h2>
+
                             <!-- PDF Articles Section -->
                             <div class="pdf_articles_section"
                                 style="margin-bottom: 50px; padding-bottom: 40px; border-bottom: 1px solid #e0d5cc;">
@@ -1211,38 +1285,32 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/nov2012_page_1.jpg" target="_blank"
+                                        <a href="pdf/images/nov2012_page_1.jpg"
                                             style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_1.jpg" alt="November 2012 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_2.jpg" alt="November 2012 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_3.jpg" alt="November 2012 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_4.jpg" alt="November 2012 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_5.jpg" alt="November 2012 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_6.jpg" alt="November 2012 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2012_page_7.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2012_page_7.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2012_page_7.jpg" alt="November 2012 - Page 7"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1258,38 +1326,31 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/april2011_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_1.jpg" alt="April 2011 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_2.jpg" alt="April 2011 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_3.jpg" alt="April 2011 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_4.jpg" alt="April 2011 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_5.jpg" alt="April 2011 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_6.jpg" alt="April 2011 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/april2011_page_7.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/april2011_page_7.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/april2011_page_7.jpg" alt="April 2011 - Page 7"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1305,13 +1366,11 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/nov2008_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2008_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2008_page_1.jpg" alt="November 2008 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/nov2008_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/nov2008_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/nov2008_page_2.jpg" alt="November 2008 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1327,48 +1386,39 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/july2008_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_1.jpg" alt="July 2008 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_2.jpg" alt="July 2008 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_3.jpg" alt="July 2008 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_4.jpg" alt="July 2008 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_5.jpg" alt="July 2008 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_6.jpg" alt="July 2008 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_7.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_7.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_7.jpg" alt="July 2008 - Page 7"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_8.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_8.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_8.jpg" alt="July 2008 - Page 8"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/july2008_page_9.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/july2008_page_9.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/july2008_page_9.jpg" alt="July 2008 - Page 9"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1384,33 +1434,27 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/marchh2008_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_1.jpg" alt="March 2008 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/marchh2008_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_2.jpg" alt="March 2008 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/marchh2008_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_3.jpg" alt="March 2008 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/marchh2008_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_4.jpg" alt="March 2008 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/marchh2008_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_5.jpg" alt="March 2008 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/marchh2008_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/marchh2008_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/marchh2008_page_6.jpg" alt="March 2008 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1426,38 +1470,31 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/november2006_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_1.jpg" alt="November 2006 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_2.jpg" alt="November 2006 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_3.jpg" alt="November 2006 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_4.jpg" alt="November 2006 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_5.jpg" alt="November 2006 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_6.jpg" alt="November 2006 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/november2006_page_7.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/november2006_page_7.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/november2006_page_7.jpg" alt="November 2006 - Page 7"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1473,8 +1510,7 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/march2006_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/march2006_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/march2006_page_1.jpg" alt="March 2006 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1490,13 +1526,11 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/sept2003_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/sept2003_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/sept2003_page_1.jpg" alt="September 2003 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/sept2003_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/sept2003_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/sept2003_page_2.jpg" alt="September 2003 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1512,38 +1546,31 @@
                                             PDF)</a></h4>
                                     <div class="article_images"
                                         style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                                        <a href="pdf/images/may2003_page_1.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_1.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_1.jpg" alt="May 2003 - Page 1"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_2.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_2.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_2.jpg" alt="May 2003 - Page 2"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_3.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_3.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_3.jpg" alt="May 2003 - Page 3"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_4.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_4.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_4.jpg" alt="May 2003 - Page 4"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_5.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_5.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_5.jpg" alt="May 2003 - Page 5"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_6.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_6.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_6.jpg" alt="May 2003 - Page 6"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
-                                        <a href="pdf/images/may2003_page_7.jpg" target="_blank"
-                                            style="display: block; max-width: 400px;">
+                                        <a href="pdf/images/may2003_page_7.jpg" style="display: block; max-width: 400px;">
                                             <img src="pdf/images/may2003_page_7.jpg" alt="May 2003 - Page 7"
                                                 style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                                         </a>
@@ -1800,7 +1827,110 @@
 
     </script>
 
+<!-- Lightbox Container -->
+<div class="lightbox-overlay" id="lightbox">
+    <span class="lightbox-prev">&#10094;</span>
+    <div class="lightbox-content">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Lightbox Image" id="lightbox-img">
+    </div>
+    <span class="lightbox-next">&#10095;</span>
+</div>
 
+<script>
+var currentImageIndex = 0;
+var allImages = [];
+
+// Lightbox functionality for article images
+$(document).on('click', '.article_images a', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Get all images in the same article_images container
+    var $container = $(this).closest('.article_images');
+    allImages = $container.find('a').map(function() {
+        return $(this).attr('href');
+    }).get();
+
+    // Find current image index
+    currentImageIndex = allImages.indexOf($(this).attr('href'));
+
+    // Show lightbox
+    $('#lightbox-img').attr('src', allImages[currentImageIndex]);
+    $('#lightbox').addClass('active');
+    $('body').css('overflow', 'hidden');
+    updateNavButtons();
+    return false;
+});
+
+// Update navigation buttons visibility
+function updateNavButtons() {
+    if (allImages.length <= 1) {
+        $('.lightbox-prev, .lightbox-next').hide();
+    } else {
+        $('.lightbox-prev, .lightbox-next').show();
+    }
+}
+
+// Navigate to previous image
+function showPrevImage() {
+    if (allImages.length > 1) {
+        currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+        $('#lightbox-img').attr('src', allImages[currentImageIndex]);
+    }
+}
+
+// Navigate to next image
+function showNextImage() {
+    if (allImages.length > 1) {
+        currentImageIndex = (currentImageIndex + 1) % allImages.length;
+        $('#lightbox-img').attr('src', allImages[currentImageIndex]);
+    }
+}
+
+// Previous button click
+$(document).on('click', '.lightbox-prev', function(e) {
+    e.stopPropagation();
+    showPrevImage();
+});
+
+// Next button click
+$(document).on('click', '.lightbox-next', function(e) {
+    e.stopPropagation();
+    showNextImage();
+});
+
+// Close lightbox on overlay click
+$(document).on('click', '#lightbox', function() {
+    $('#lightbox').removeClass('active');
+    $('body').css('overflow', 'auto');
+});
+
+// Close lightbox on close button click
+$(document).on('click', '.lightbox-close', function() {
+    $('#lightbox').removeClass('active');
+    $('body').css('overflow', 'auto');
+});
+
+// Prevent closing when clicking on the image itself
+$(document).on('click', '#lightbox-img', function(e) {
+    e.stopPropagation();
+});
+
+// Keyboard navigation
+$(document).on('keydown', function(e) {
+    if ($('#lightbox').hasClass('active')) {
+        if (e.key === 'Escape') {
+            $('#lightbox').removeClass('active');
+            $('body').css('overflow', 'auto');
+        } else if (e.key === 'ArrowLeft') {
+            showPrevImage();
+        } else if (e.key === 'ArrowRight') {
+            showNextImage();
+        }
+    }
+});
+</script>
 
 </body>
 </html>
