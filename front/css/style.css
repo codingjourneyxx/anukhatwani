@@ -289,7 +289,7 @@ sup{font-size:10px;margin-left:2px;}
     padding: 0 78px;
 }
 .home_service {
-    background: #ffffff;
+    background: transparent;
     border-top: 3px solid #a18971 ;
     padding-top: 40px;
 }
@@ -794,7 +794,7 @@ section#section11 {
 
 
 .home_brad_st {
-    background: #ffffff;
+    background: #ffffff00;
     height: 100vh;
     display: flex;
     align-items: center;

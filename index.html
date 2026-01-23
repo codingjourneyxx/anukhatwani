@@ -38,6 +38,28 @@
 <style>
     @import url("../use.typekit.net/tcy8bdu.css");
 
+    /* Watermark Styles */
+    .watermark {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/watermark.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 35%;
+        opacity: 0.6;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+        .watermark {
+            background-size: 80%;
+        }
+    }
+
     /* Submenu Styles - Light Floating Dropdown */
     .overlay-box-div-left ul li.has-submenu {
         position: relative;
@@ -372,6 +394,9 @@ $(document).ready(function() {
 <!-- End Facebook Pixel Code -->
 </head>
 <body>
+    <!-- Watermark -->
+    <div class="watermark"></div>
+
     <div class="header_menu HomePage">
         <div class="header_menu_bg"></div>
         <div class="logo Homelogo"><a href="index.html" class="bnr_logo"><img src="assets/sitelogo.png"></a></div>
@@ -1071,7 +1096,7 @@ $(document).ready(function() {
                 </div>
                 <div class="hmbrd__tx_rt Mobile_Sta">
                     <div class="ins_sl_bx_tx dfgh8765 sdfgfds">
-                        <h1 class="btn_border Mobile_disNone ytr56 homepage-about-brand-title">A & MORE</h1>
+                        <h1 class="btn_border Mobile_disNone ytr56 homepage-about-brand-title">Brand Story</h1>
                         <p class="intro-text">A & MORE is the creative extension of Anu Khatwani's design philosophy where craftsmanship, culture, and contemporary living intersect.</p>
                         <p>At A & MORE, furniture is where heritage craftsmanship meets contemporary design. Rooted in time-honoured techniques and reimagined through bold, art-inspired forms, each piece is meticulously handcrafted by skilled artisans using solid wood, refined finishes, and thoughtful detailing.</p>
                         <p>Inspired by antique motifs yet shaped for modern living, our collections transform furniture into sculptural statements—where beauty, function, and storytelling coexist. Designed to elevate spaces, every creation reflects a balance of soul, structure, and innovation.</p>
@@ -1110,7 +1135,7 @@ $(document).ready(function() {
         /* About Section Styles */
         .about_section {
             padding: 80px 0;
-            background: #fff;
+            background: transparent;
         }
         .about_wrapper {
             display: flex;
@@ -1516,7 +1541,7 @@ $(document).ready(function() {
     <style>
         .home_clients {
             padding: 80px 0;
-            background: #ffffff;
+            background: transparent;
             border-top: 3px solid #9f7e61;
             border-bottom: 1px solid #ddd;
         }
@@ -1702,7 +1727,7 @@ $(document).ready(function() {
     <style>
         .home_portfolio {
             padding: 80px 0;
-            background: #f9f7f5;
+            background: transparent;
             overflow: hidden;
             text-align: center;
         }
@@ -1896,7 +1921,7 @@ $(document).ready(function() {
     <style>
         .home_press {
             padding: 80px 0;
-            background: #f9f7f5;
+            background: transparent;
         }
         .home_press h1 {
             text-align: center;
