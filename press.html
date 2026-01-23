@@ -996,6 +996,37 @@
                 transform: scale(1.03);
             }
 
+            /* Collage Styles */
+            .collage-section a img:hover {
+                transform: scale(1.02);
+            }
+            .collage-link {
+                display: block;
+                cursor: pointer;
+            }
+
+            @media (max-width: 768px) {
+                .collage-row {
+                    flex-wrap: wrap !important;
+                    max-width: 100% !important;
+                }
+                .collage-row .collage-item {
+                    flex: 0 0 48% !important;
+                }
+                .collage-row .collage-item img {
+                    height: 220px !important;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .collage-row .collage-item {
+                    flex: 0 0 100% !important;
+                }
+                .collage-row .collage-item img {
+                    height: 200px !important;
+                }
+            }
+
             @media(max-width:768px) {
 
                 .Portfolio_headr .menu.bgr_mn_cl {
@@ -1283,6 +1314,30 @@
                         <div class="media-content-section" style="padding: 20px 0;">
 
                             <h2 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 40px; font-weight: 300; letter-spacing: 2px;">Media</h2>
+
+                            <!-- Testimonial Collage Section - Justified Gallery -->
+                            <div class="collage-section" style="margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid #e0d5cc;">
+                                <div class="justified-gallery" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0 20px;">
+                                    <a href="images/testimonal/collage/1.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/1.jpeg" alt="Testimonial 1" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                    <a href="images/testimonal/collage/2.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/2.jpeg" alt="Testimonial 2" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                    <a href="images/testimonal/collage/3.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/3.png" alt="Testimonial 3" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                    <a href="images/testimonal/collage/4.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/4.jpeg" alt="Testimonial 4" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                    <a href="images/testimonal/collage/5.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/5.png" alt="Testimonial 5" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                    <a href="images/testimonal/collage/Untitled design (4).png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                        <img src="images/testimonal/collage/Untitled design (4).png" alt="Testimonial 6" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                    </a>
+                                </div>
+                            </div>
 
                             <!-- PDF Articles Section -->
                             <div class="pdf_articles_section"
@@ -1866,6 +1921,31 @@ $(document).on('click', '.article_images a', function(e) {
         return $(this).attr('href');
     }).get();
     allTitles = $container.find('a img').map(function() {
+        return $(this).attr('alt') || '';
+    }).get();
+
+    // Find current image index
+    currentImageIndex = allImages.indexOf($(this).attr('href'));
+
+    // Show lightbox with image and title
+    updateLightboxImage();
+    $('#lightbox').addClass('active');
+    $('body').css('overflow', 'hidden');
+    updateNavButtons();
+    return false;
+});
+
+// Lightbox functionality for collage images
+$(document).on('click', '.collage-link', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Get all images and titles in the collage section
+    var $container = $(this).closest('.collage-section');
+    allImages = $container.find('.collage-link').map(function() {
+        return $(this).attr('href');
+    }).get();
+    allTitles = $container.find('.collage-link img').map(function() {
         return $(this).attr('alt') || '';
     }).get();
 
