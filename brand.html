@@ -10,9 +10,19 @@
     <link href="brand.html" rel=canonical>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    /* Watermark Styles */
+    /* Hide full-page watermark on brand page */
     .watermark {
-        position: fixed;
+        display: none;
+    }
+
+    /* Watermark on right column only */
+    .bnr_rt_tx {
+        position: relative;
+    }
+
+    .bnr_rt_tx::before {
+        content: '';
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -20,15 +30,20 @@
         background-image: url('assets/watermark.jpg');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 35%;
-        opacity: 0.25;
+        background-size: 50%;
+        opacity: 0.2;
         pointer-events: none;
         z-index: 0;
     }
 
+    .bnr_rt_tx > * {
+        position: relative;
+        z-index: 1;
+    }
+
     @media (max-width: 768px) {
-        .watermark {
-            background-size: 80%;
+        .bnr_rt_tx::before {
+            background-size: 70%;
         }
     }
 </style>

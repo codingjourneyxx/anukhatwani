@@ -1270,7 +1270,6 @@ div#section0 .bnr_po {
     display: flex;
     flex-wrap: wrap;
 background: #ffffff;
-background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 248, 240, 1) 100%);
 }
 .about_lt, .bnr_rt_tx {
     width: 50%;
