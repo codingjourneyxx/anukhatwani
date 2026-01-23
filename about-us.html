@@ -34,26 +34,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-    /* Watermark Styles */
+    /* Hide full-page watermark on about page */
     .watermark {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('assets/watermark.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 35%;
-        opacity: 0.25;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    @media (max-width: 768px) {
-        .watermark {
-            background-size: 80%;
-        }
+        display: none;
     }
 
     /* 50/50 Layout for About Page on Desktop */
@@ -89,6 +72,28 @@
         box-sizing: border-box;
     }
 
+    /* Watermark on right column only */
+    .inner_banner.About_banner .bnr_rt_tx::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/watermark.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50%;
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .inner_banner.About_banner .bnr_rt_tx > * {
+        position: relative;
+        z-index: 1;
+    }
+
     @media (max-width: 991px) {
         .inner_banner.About_banner .about_lt {
             position: relative;
@@ -99,6 +104,10 @@
         .inner_banner.About_banner .bnr_rt_tx {
             width: 100%;
             margin-left: 0;
+        }
+
+        .inner_banner.About_banner .bnr_rt_tx::before {
+            background-size: 70%;
         }
     }
 </style>
