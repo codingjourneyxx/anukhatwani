@@ -244,6 +244,95 @@
     }
 
 
+    /* Publications Section */
+    .publications_section {
+        padding: 50px 0;
+        background: #fff;
+    }
+
+    .publications_section .container {
+        max-width: 1600px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .publications_grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
+    }
+
+    .publication_card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .publication_card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .publication_card_img {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .publication_card_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .publication_card_content {
+        padding: 20px;
+    }
+
+    .publication_card_date {
+        font-size: 12px;
+        color: #a18971;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .publication_card_title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    .publication_card_desc {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .publication_card_link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #a18971;
+        font-weight: 500;
+        transition: gap 0.3s ease;
+    }
+
+    .publication_card_link:hover {
+        gap: 12px;
+    }
+
     /* Latest News Section */
     .latest_news {
         padding: 20px 0;
@@ -604,6 +693,10 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
+        .publications_grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         .category_sections {
             grid-template-columns: 1fr;
         }
@@ -651,6 +744,10 @@
 
         .news_grid,
         .editors_pick_grid {
+            grid-template-columns: 1fr;
+        }
+
+        .publications_grid {
             grid-template-columns: 1fr;
         }
 
@@ -756,6 +853,135 @@
             </div>
         </div>
 
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications_section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Press & Publications</h2>
+                <a href="#" class="see_all">See all →</a>
+            </div>
+            <div class="publications_grid">
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/nov2012_page_1.jpg" alt="November 2012">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">November 2012</div>
+                        <h3 class="publication_card_title">Featured in Design Magazine</h3>
+                        <p class="publication_card_desc">An exclusive look at our latest furniture collection and design philosophy.</p>
+                        <a href="pdf/nov2012.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/april2011_page_1.jpg" alt="April 2011">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">April 2011</div>
+                        <h3 class="publication_card_title">Interior Design Excellence</h3>
+                        <p class="publication_card_desc">Celebrating craftsmanship and innovation in luxury interiors.</p>
+                        <a href="pdf/april2011.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/nov2008_page_1.jpg" alt="November 2008">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">November 2008</div>
+                        <h3 class="publication_card_title">Architectural Digest Feature</h3>
+                        <p class="publication_card_desc">Spotlight on heritage-inspired contemporary design.</p>
+                        <a href="pdf/nov2008.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/july2008_page_1.jpg" alt="July 2008">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">July 2008</div>
+                        <h3 class="publication_card_title">Luxury Living Showcase</h3>
+                        <p class="publication_card_desc">Transforming spaces with bespoke furniture designs.</p>
+                        <a href="pdf/july2008.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/marchh2008_page_1.jpg" alt="March 2008">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">March 2008</div>
+                        <h3 class="publication_card_title">Design Innovation Award</h3>
+                        <p class="publication_card_desc">Recognized for excellence in furniture craftsmanship.</p>
+                        <a href="pdf/marchh2008.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/november2006_page_1.jpg" alt="November 2006">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">November 2006</div>
+                        <h3 class="publication_card_title">Home & Lifestyle Feature</h3>
+                        <p class="publication_card_desc">Creating timeless elegance through artisanal design.</p>
+                        <a href="pdf/november2006.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/march2006_page_1.jpg" alt="March 2006">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">March 2006</div>
+                        <h3 class="publication_card_title">Emerging Designer Spotlight</h3>
+                        <p class="publication_card_desc">A fresh perspective on modern Indian design.</p>
+                        <a href="pdf/march2006.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/sept2003_page_1.jpg" alt="September 2003">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">September 2003</div>
+                        <h3 class="publication_card_title">Interior Trends Report</h3>
+                        <p class="publication_card_desc">Pioneering luxury furniture design in India.</p>
+                        <a href="pdf/sept2003.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication_card">
+                    <div class="publication_card_img">
+                        <img src="pdf/images/may2003_page_1.jpg" alt="May 2003">
+                    </div>
+                    <div class="publication_card_content">
+                        <div class="publication_card_date">May 2003</div>
+                        <h3 class="publication_card_title">Craftsmanship Excellence</h3>
+                        <p class="publication_card_desc">The art of handcrafted furniture making.</p>
+                        <a href="pdf/may2003.pdf" target="_blank" class="publication_card_link">
+                            View PDF <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Latest News Section -->
