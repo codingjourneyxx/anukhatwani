@@ -152,7 +152,7 @@
     }
 
     .hero_right_top {
-        padding: 30px;
+        padding: 15px ;
         border-bottom: 1px solid #eee;
     }
 
@@ -348,23 +348,25 @@
     .news_grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 25px;
+        gap: 15px;
     }
 
     .news_card {
         background: #fff;
-        border-radius: 10px;
+        border-radius: 6px;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .news_card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     }
 
     .news_card_img {
         width: 100%;
-        height: 180px;
+        height: 350px;
         overflow: hidden;
         position: relative;
     }
@@ -402,31 +404,29 @@
     }
 
     .news_card_content {
-        padding: 15px 0;
+        padding: 10px;
     }
 
     .news_card_title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         line-height: 1.4;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .news_card_excerpt {
         font-size: 13px;
         color: #666;
         line-height: 1.5;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-    }
-
-    .news_card_meta {
-        font-size: 12px;
-        color: #999;
     }
 
     /* Story Section */
@@ -445,6 +445,12 @@
         gap: 25px;
         overflow-x: auto;
         padding-bottom: 10px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .story_list::-webkit-scrollbar {
+        display: none;
     }
 
     .story_item {
@@ -453,28 +459,116 @@
         align-items: center;
         gap: 10px;
         flex-shrink: 0;
+        cursor: pointer;
     }
 
     .story_circle {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
+        width: 120px;
+        height: 180px;
+        border-radius: 12px;
         padding: 3px;
         background: linear-gradient(135deg, #a18971, #d4c4b5);
+        position: relative;
+        overflow: hidden;
     }
 
     .story_circle img {
         width: 100%;
         height: 100%;
-        border-radius: 50%;
+        border-radius: 10px;
         object-fit: cover;
-        border: 3px solid #fff;
     }
 
     .story_name {
         font-size: 12px;
         color: #333;
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
+        font-weight: 500;
+    }
+
+    .story_play_icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        transition: transform 0.3s ease;
+    }
+
+    .story_item:hover .story_play_icon {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .story_play_icon i {
+        font-size: 14px;
+        color: #a18971;
+        margin-left: 3px;
+    }
+
+    /* Video Popup Modal */
+    .video_modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.95);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .video_modal.active {
+        display: flex;
+    }
+
+    .video_modal_content {
+        position: relative;
+        max-width: 400px;
+        max-height: 90%;
+    }
+
+    .video_modal_content video {
+        max-width: 100%;
+        max-height: 85vh;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .video_modal_close {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .video_modal_close:hover {
+        background: rgba(255,255,255,0.2);
+        transform: rotate(90deg);
     }
 
     /* Must Read Section */
@@ -789,7 +883,7 @@
         <div class="hero_main">
             <!-- Left - Featured Article -->
             <div class="hero_left">
-                <img src="mediaimages/554297418_18483509911073342_2664465457516844630_n.jpg" alt="Featured">
+                <img src="mediaimages/581729097_18494974162073342_4963487156312476721_n.jpg" alt="Featured">
                 <div class="hero_left_overlay">
                     <span class="hero_left_tag">Featured</span>
                     <h1 class="hero_left_title">Crafting Timeless Spaces: A Design Philosophy</h1>
@@ -811,7 +905,7 @@
                 <div class="hero_right_articles">
                     <a href="#" class="hero_article">
                         <div class="hero_article_img">
-                            <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Article">
+                            <img src="mediaimages/584731286_18495797959073342_7410997765407923499_n.jpg" alt="Article">
                         </div>
                         <div class="hero_article_content">
                             <div class="hero_article_category">Furniture</div>
@@ -821,7 +915,7 @@
                     </a>
                     <a href="#" class="hero_article">
                         <div class="hero_article_img">
-                            <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Article">
+                            <img src="mediaimages/587293531_18498171463073342_644564610653461639_n.jpg" alt="Article">
                         </div>
                         <div class="hero_article_content">
                             <div class="hero_article_category">Sustainability</div>
@@ -831,7 +925,7 @@
                     </a>
                     <a href="#" class="hero_article">
                         <div class="hero_article_img">
-                            <img src="mediaimages/565084798_18487493224073342_4337553807466302406_n.jpg" alt="Article">
+                            <img src="mediaimages/582334492_18494285752073342_4668111910689522321_n.jpg" alt="Article">
                         </div>
                         <div class="hero_article_content">
                             <div class="hero_article_category">Heritage</div>
@@ -841,12 +935,22 @@
                     </a>
                     <a href="#" class="hero_article">
                         <div class="hero_article_img">
-                            <img src="mediaimages/539464607_18478976578073342_6329068330523748553_n.jpg" alt="Article">
+                            <img src="mediaimages/581257060_18493853995073342_4538232462710024629_n.jpg" alt="Article">
                         </div>
                         <div class="hero_article_content">
                             <div class="hero_article_category">Interiors</div>
                             <h3 class="hero_article_title">The Power of Statement Furniture</h3>
                             <div class="hero_article_meta">Sep 30, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="hero_article">
+                        <div class="hero_article_img">
+                            <img src="mediaimages/587763195_18495992761073342_28709471245729521_n.jpg" alt="Article">
+                        </div>
+                        <div class="hero_article_content">
+                            <div class="hero_article_category">Craftsmanship</div>
+                            <h3 class="hero_article_title">Artisan Techniques in Modern Design</h3>
+                            <div class="hero_article_meta">Aug 15, 2024 • 6 min read</div>
                         </div>
                     </a>
                 </div>
@@ -995,27 +1099,19 @@
                 <a href="#" class="news_card">
                     <div class="news_card_img">
                         <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="News">
-                        <div class="news_card_badge">
-                            <span class="badge badge_red">New</span>
-                        </div>
                     </div>
                     <div class="news_card_content">
                         <h3 class="news_card_title">The Art of Bespoke Furniture Design</h3>
                         <p class="news_card_excerpt">How handcrafted furniture pieces transform living spaces into curated works of art.</p>
-                        <div class="news_card_meta">Furniture  •  8 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
                     <div class="news_card_img">
                         <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="News">
-                        <div class="news_card_badge">
-                            <span class="badge badge_gray">Apr 15, 2024</span>
-                        </div>
                     </div>
                     <div class="news_card_content">
                         <h3 class="news_card_title">Sustainable Luxury: Design for the Future</h3>
                         <p class="news_card_excerpt">Embracing eco-conscious materials while maintaining elegance.</p>
-                        <div class="news_card_meta">Sustainability  •  6 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1025,7 +1121,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">Blending Heritage with Modern Elegance</h3>
                         <p class="news_card_excerpt">Discovering how Indian craftsmanship meets global design sensibilities.</p>
-                        <div class="news_card_meta">Heritage  •  7 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1035,7 +1130,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">The Power of Statement Furniture</h3>
                         <p class="news_card_excerpt">How a single piece can transform and define an entire living space.</p>
-                        <div class="news_card_meta">Interiors  •  5 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1045,7 +1139,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">Textures That Tell Stories</h3>
                         <p class="news_card_excerpt">Exploring the rich tapestry of materials in luxury furniture design.</p>
-                        <div class="news_card_meta">Craftsmanship  •  4 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1055,7 +1148,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">Designing for Comfort and Style</h3>
                         <p class="news_card_excerpt">The delicate balance between aesthetic appeal and everyday functionality.</p>
-                        <div class="news_card_meta">Living Spaces  •  5 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1065,7 +1157,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">The Journey of a Custom Creation</h3>
                         <p class="news_card_excerpt">From concept to completion: the meticulous process of bespoke furniture.</p>
-                        <div class="news_card_meta">Process  •  6 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1075,7 +1166,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">Evolution of Indian Luxury Design</h3>
                         <p class="news_card_excerpt">Traditional Indian aesthetics reimagined for contemporary living.</p>
-                        <div class="news_card_meta">Design  •  10 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1085,7 +1175,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">Creating Harmony in Open Spaces</h3>
                         <p class="news_card_excerpt">Mastering the art of furniture placement in open floor plans.</p>
-                        <div class="news_card_meta">Interior Design  •  6 min read</div>
                     </div>
                 </a>
                 <a href="#" class="news_card">
@@ -1095,7 +1184,6 @@
                     <div class="news_card_content">
                         <h3 class="news_card_title">The Art of Wood Selection</h3>
                         <p class="news_card_excerpt">Understanding grain, texture, and quality in fine furniture making.</p>
-                        <div class="news_card_meta">Craftsmanship  •  5 min read</div>
                     </div>
                 </a>
             </div>
@@ -1110,57 +1198,89 @@
                 <a href="#" class="see_all">See all →</a>
             </div>
             <div class="story_list">
-                <a href="#" class="story_item">
+                <div class="story_item" onclick="openVideoPopup('videos/A masterpiece of vintage craftsmanship….Our hand-carved solid wooden poles bed frame embodies ti.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/542847509_18479630089073342_4500191957307432025_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Interiors</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Vintage Bed</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/A statement of nature-inspired artistry and refined craftsmanship…. This stunning rustic solid w (1).mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/549255451_18481774627073342_8515186345193662686_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Furniture</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Rustic Art</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Discover timeless elegance with artisanal craftsmanship… This handcrafted solid wooden rustic Ba.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/552819982_18482694211073342_3335591684815740043_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Decor</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Rustic Bar</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Elevate your interiors with artistry and elegance… This masterfully carved wooden chest, adorned.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/552958901_18483158926073342_3635422041825547802_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Custom</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Carved Chest</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Elevate your living space with timeless glamour…. This exquisite vintage-style armchair features.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Luxury</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Armchair</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Embrace the art of timeless beauty…. Our exquisitely crafted life size vintage mirrors celebrate.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/559125315_18485313625073342_4948365530757407276_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Heritage</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Mirrors</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Experience the harmony of comfort and elegance…. These simple straight lines plush tufted armcha.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Crafts</span>
-                </a>
-                <a href="#" class="story_item">
+                    <span class="story_name">Tufted Chair</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Experience timeless elegance with exquisite craftsmanship…, This handcrafted wooden cabinet, hig.mp4')">
                     <div class="story_circle">
                         <img src="mediaimages/563881233_18486937129073342_6712818138334963574_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
                     </div>
-                    <span class="story_name">Studio</span>
-                </a>
+                    <span class="story_name">Cabinet</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Indulge in comfort, embrace timeless elegance…. This exquisitely pinned crafted chaise lounge fe.mp4')">
+                    <div class="story_circle">
+                        <img src="mediaimages/567417668_18489055498073342_723071821607816743_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
+                    </div>
+                    <span class="story_name">Chaise</span>
+                </div>
+                <div class="story_item" onclick="openVideoPopup('videos/Video-370.mp4')">
+                    <div class="story_circle">
+                        <img src="mediaimages/569027884_18489473122073342_2653835845652433414_n.jpg" alt="Story">
+                        <div class="story_play_icon"><i class="fa fa-play"></i></div>
+                    </div>
+                    <span class="story_name">Collection</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Video Popup Modal -->
+    <div class="video_modal" id="videoModal">
+        <button class="video_modal_close" onclick="closeVideoPopup()">&times;</button>
+        <div class="video_modal_content">
+            <video id="popupVideo" autoplay loop muted playsinline>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
     <!-- Must Read Section -->
     <section class="must_read">
@@ -1216,93 +1336,287 @@
     </section>
 
 
-    <!-- Category Sections -->
-    <section class="category_sections">
-        <div class="container" style="display: contents;">
-            <div class="category_section">
-                <div class="section_header">
-                    <h2 class="section_title">Furniture</h2>
-                    <a href="#" class="see_all">See all →</a>
-                </div>
-                <div class="category_grid">
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Category">
-                        </div>
-                        <div class="category_card_badge">Seating</div>
-                        <h4 class="category_card_title">Ergonomic Luxury: Modern Seating Solutions</h4>
-                        <div class="category_card_meta">Apr 22, 2024  •  5 min read</div>
-                    </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/559125315_18485313625073342_4948365530757407276_n.jpg" alt="Category">
-                        </div>
-                        <div class="category_card_badge">Tables</div>
-                        <h4 class="category_card_title">Centerpiece Tables That Command Attention</h4>
-                        <div class="category_card_meta">Apr 20, 2024  •  4 min read</div>
-                    </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/542847509_18479630089073342_4500191957307432025_n.jpg" alt="Category">
-                        </div>
-                        <div class="category_card_badge">Storage</div>
-                        <h4 class="category_card_title">Elegant Storage Solutions for Modern Homes</h4>
-                        <div class="category_card_meta">Apr 18, 2024  •  5 min read</div>
-                    </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/544848022_18480991072073342_7638116477514679811_n.jpg" alt="Category">
-                        </div>
-                        <div class="category_card_badge">Dining</div>
-                        <h4 class="category_card_title">Dining Sets That Define Gatherings</h4>
-                        <div class="category_card_meta">Apr 15, 2024  •  6 min read</div>
-                    </a>
-                </div>
+    <!-- Furniture Section -->
+    <section class="must_read">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Furniture</h2>
+                <a href="#" class="see_all">See all →</a>
             </div>
-            <div class="category_section">
-                <div class="section_header">
-                    <h2 class="section_title">Interiors</h2>
-                    <a href="#" class="see_all">See all →</a>
-                </div>
-                <div class="category_grid">
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Category">
+            <div class="must_read_grid">
+                <a href="#" class="must_read_main">
+                    <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Furniture">
+                    <div class="must_read_main_overlay">
+                        <span class="badge badge_red">Featured</span>
+                        <h3 class="must_read_main_title">Ergonomic Luxury: Modern Seating Solutions</h3>
+                        <p class="must_read_main_excerpt">Discover how comfort meets elegance in our handcrafted seating collection designed for contemporary living.</p>
+                        <div class="must_read_main_meta">Seating • 5 min read</div>
+                    </div>
+                </a>
+                <div class="must_read_sidebar">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/559125315_18485313625073342_4948365530757407276_n.jpg" alt="Article">
                         </div>
-                        <div class="category_card_badge">Residential</div>
-                        <h4 class="category_card_title">Transforming Urban Apartments</h4>
-                        <div class="category_card_meta">Apr 21, 2024  •  6 min read</div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Tables</div>
+                            <h4 class="must_read_card_title">Centerpiece Tables That Command Attention</h4>
+                            <div class="must_read_card_meta">Apr 20, 2024 • 4 min read</div>
+                        </div>
                     </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/563881233_18486937129073342_6712818138334963574_n.jpg" alt="Category">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/542847509_18479630089073342_4500191957307432025_n.jpg" alt="Article">
                         </div>
-                        <div class="category_card_badge">Commercial</div>
-                        <h4 class="category_card_title">Office Spaces That Inspire Creativity</h4>
-                        <div class="category_card_meta">Apr 19, 2024  •  5 min read</div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Storage</div>
+                            <h4 class="must_read_card_title">Elegant Storage Solutions for Modern Homes</h4>
+                            <div class="must_read_card_meta">Apr 18, 2024 • 5 min read</div>
+                        </div>
                     </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/549255451_18481774627073342_8515186345193662686_n.jpg" alt="Category">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/544848022_18480991072073342_7638116477514679811_n.jpg" alt="Article">
                         </div>
-                        <div class="category_card_badge">Luxury</div>
-                        <h4 class="category_card_title">Luxury Living Room Transformations</h4>
-                        <div class="category_card_meta">Apr 17, 2024  •  7 min read</div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Dining</div>
+                            <h4 class="must_read_card_title">Dining Sets That Define Gatherings</h4>
+                            <div class="must_read_card_meta">Apr 15, 2024 • 6 min read</div>
+                        </div>
                     </a>
-                    <a href="#" class="category_card">
-                        <div class="category_card_img">
-                            <img src="mediaimages/552819982_18482694211073342_3335591684815740043_n.jpg" alt="Category">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/530451453_18475336726073342_8318070822960366779_n.jpg" alt="Article">
                         </div>
-                        <div class="category_card_badge">Bedroom</div>
-                        <h4 class="category_card_title">Serene Bedroom Design Ideas</h4>
-                        <div class="category_card_meta">Apr 14, 2024  •  5 min read</div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Beds</div>
+                            <h4 class="must_read_card_title">Handcrafted Beds for Restful Nights</h4>
+                            <div class="must_read_card_meta">Apr 12, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/526753134_18474214882073342_3233427390060960401_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Cabinets</div>
+                            <h4 class="must_read_card_title">Artisan Cabinets: Form Meets Function</h4>
+                            <div class="must_read_card_meta">Apr 10, 2024 • 4 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/536831327_18476887678073342_886760867251837878_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Sofas</div>
+                            <h4 class="must_read_card_title">Luxurious Sofas for Every Living Space</h4>
+                            <div class="must_read_card_meta">Apr 8, 2024 • 6 min read</div>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Interior Design Section -->
+    <section class="must_read">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Interior Design</h2>
+                <a href="#" class="see_all">See all →</a>
+            </div>
+            <div class="must_read_grid">
+                <a href="#" class="must_read_main">
+                    <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Interior Design">
+                    <div class="must_read_main_overlay">
+                        <span class="badge badge_red">Featured</span>
+                        <h3 class="must_read_main_title">Transforming Urban Apartments into Luxury Havens</h3>
+                        <p class="must_read_main_excerpt">How thoughtful design transforms compact urban spaces into luxurious sanctuaries of comfort and style.</p>
+                        <div class="must_read_main_meta">Residential • 6 min read</div>
+                    </div>
+                </a>
+                <div class="must_read_sidebar">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/563881233_18486937129073342_6712818138334963574_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Commercial</div>
+                            <h4 class="must_read_card_title">Office Spaces That Inspire Creativity</h4>
+                            <div class="must_read_card_meta">Apr 19, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/549255451_18481774627073342_8515186345193662686_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Living Room</div>
+                            <h4 class="must_read_card_title">Luxury Living Room Transformations</h4>
+                            <div class="must_read_card_meta">Apr 17, 2024 • 7 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/552819982_18482694211073342_3335591684815740043_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Bedroom</div>
+                            <h4 class="must_read_card_title">Serene Bedroom Design Ideas</h4>
+                            <div class="must_read_card_meta">Apr 14, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/565140828_18488191138073342_5211834211648755641_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Kitchen</div>
+                            <h4 class="must_read_card_title">Modern Kitchen Design Trends</h4>
+                            <div class="must_read_card_meta">Apr 11, 2024 • 6 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/560441479_18486339184073342_8385698657391353022_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Bathroom</div>
+                            <h4 class="must_read_card_title">Spa-Inspired Bathroom Retreats</h4>
+                            <div class="must_read_card_meta">Apr 9, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/569027884_18489473122073342_2653835845652433414_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Outdoor</div>
+                            <h4 class="must_read_card_title">Outdoor Living Spaces That Impress</h4>
+                            <div class="must_read_card_meta">Apr 7, 2024 • 7 min read</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Décor Section -->
+    <section class="must_read">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Décor</h2>
+                <a href="#" class="see_all">See all →</a>
+            </div>
+            <div class="must_read_grid">
+                <a href="#" class="must_read_main">
+                    <img src="mediaimages/565084798_18487493224073342_4337553807466302406_n.jpg" alt="Décor">
+                    <div class="must_read_main_overlay">
+                        <span class="badge badge_red">Featured</span>
+                        <h3 class="must_read_main_title">The Art of Layering Textures in Home Décor</h3>
+                        <p class="must_read_main_excerpt">Master the art of combining materials, fabrics, and finishes to create visually rich interiors.</p>
+                        <div class="must_read_main_meta">Styling • 8 min read</div>
+                    </div>
+                </a>
+                <div class="must_read_sidebar">
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/552958901_18483158926073342_3635422041825547802_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Accessories</div>
+                            <h4 class="must_read_card_title">Statement Pieces That Transform Spaces</h4>
+                            <div class="must_read_card_meta">Apr 12, 2024 • 4 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/539791158_18477514912073342_2123777039530153280_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Lighting</div>
+                            <h4 class="must_read_card_title">Ambient Lighting for Every Mood</h4>
+                            <div class="must_read_card_meta">Apr 10, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/543656251_18480421543073342_2050366265735633470_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Art & Mirrors</div>
+                            <h4 class="must_read_card_title">Curating Wall Art for Elegant Interiors</h4>
+                            <div class="must_read_card_meta">Apr 8, 2024 • 6 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/571481020_18490852198073342_8211870447901710777_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Textiles</div>
+                            <h4 class="must_read_card_title">Luxurious Fabrics for Elegant Homes</h4>
+                            <div class="must_read_card_meta">Apr 6, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/567417668_18489055498073342_723071821607816743_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Rugs</div>
+                            <h4 class="must_read_card_title">Handwoven Rugs: Art Underfoot</h4>
+                            <div class="must_read_card_meta">Apr 4, 2024 • 4 min read</div>
+                        </div>
+                    </a>
+                    <a href="#" class="must_read_card">
+                        <div class="must_read_card_img">
+                            <img src="mediaimages/581257060_18493853995073342_4538232462710024629_n.jpg" alt="Article">
+                        </div>
+                        <div class="must_read_card_content">
+                            <div class="must_read_card_category">Plants</div>
+                            <h4 class="must_read_card_title">Greenery That Elevates Your Space</h4>
+                            <div class="must_read_card_meta">Apr 2, 2024 • 5 min read</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openVideoPopup(videoSrc) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('popupVideo');
+            video.src = videoSrc;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoPopup() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('popupVideo');
+            video.pause();
+            video.src = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on clicking outside video
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('video_modal_content')) {
+                closeVideoPopup();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeVideoPopup();
+            }
+        });
+    </script>
 
 </body>
 </html>
