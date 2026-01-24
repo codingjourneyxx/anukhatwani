@@ -1948,9 +1948,9 @@ $(document).ready(function() {
             text-transform: uppercase;
         }
         .press_container {
-            max-width: 1200px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
         .press_grid {
             display: flex;
@@ -1964,9 +1964,8 @@ $(document).ready(function() {
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 350px;
-            flex: 1;
-            min-width: 280px;
+            width: calc(25% - 23px);
+            flex: none;
         }
         .press_card:hover {
             transform: translateY(-5px);
@@ -2058,7 +2057,7 @@ $(document).ready(function() {
                 align-items: center;
             }
             .press_card {
-                max-width: 100%;
+                width: 100%;
             }
         }
     </style>
