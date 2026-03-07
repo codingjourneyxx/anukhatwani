@@ -1341,30 +1341,69 @@
 
                             <h2 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 40px; font-weight: 300; letter-spacing: 2px;">Media</h2>
 
-                            <!-- Testimonial Collage Section - Justified Gallery -->
-                            <div class="collage-section" style="margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid #e0d5cc;">
-                                <div class="justified-gallery" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0 20px;">
-                                    <a href="images/testimonal/collage/1.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/1.jpeg" alt="Testimonial 1" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
-                                    <a href="images/testimonal/collage/2.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/2.jpeg" alt="Testimonial 2" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
-                                    <a href="images/testimonal/collage/3.png" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/3.png" alt="Testimonial 3" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
-                                    <a href="images/testimonal/collage/4.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/4.jpeg" alt="Testimonial 4" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
-                                    <a href="images/testimonal/collage/5.png" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/5.png" alt="Testimonial 5" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
-                                    <a href="images/testimonal/collage/Untitled design (4).png" class="collage-link" style="flex-grow: 1; height: 300px;">
-                                        <img src="images/testimonal/collage/Untitled design (4).png" alt="Testimonial 6" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                    </a>
+                            <!-- Media Tabs Navigation -->
+                            <style>
+                                .media-tabs-container { margin-bottom: 40px; }
+                                .media-tabs { display: flex; justify-content: center; list-style: none; padding: 0; margin: 0 0 30px 0; border-bottom: 2px solid #e0d5cc; }
+                                .media-tab { padding: 15px 40px; cursor: pointer; font-size: 16px; letter-spacing: 1px; color: #888; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.3s ease; background: none; }
+                                .media-tab:hover { color: #a18971; }
+                                .media-tab.active { color: #a18971; border-bottom-color: #a18971; }
+                                .tab-content { display: none; }
+                                .tab-content.active { display: block; }
+                            </style>
+                            <div class="media-tabs-container">
+                                <ul class="media-tabs">
+                                    <li class="media-tab active" data-tab="online-media">Online Media</li>
+                                    <li class="media-tab" data-tab="offline-events">Offline Events</li>
+                                    <li class="media-tab" data-tab="print-media">Print Media</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tab Content: Online Media -->
+                            <div class="tab-content active" id="online-media">
+                                <div class="online-media-section" style="padding: 20px;">
+                                    <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured coverage and mentions across digital platforms</p>
+                                    <div class="online-media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 20px;">
+                                        <!-- Online media items can be added here -->
+                                        <div style="text-align: center; padding: 60px 30px; background: #f9f7f5; border-radius: 12px; border: 1px solid #e0d5cc;">
+                                            <i class="fa fa-globe" style="font-size: 48px; color: #a18971; margin-bottom: 20px;"></i>
+                                            <p style="color: #888; font-size: 16px;">Online media coverage coming soon</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!-- Tab Content: Offline Events -->
+                            <div class="tab-content" id="offline-events">
+                                <!-- Testimonial Collage Section - Justified Gallery -->
+                                <div class="collage-section" style="margin-bottom: 60px; padding-bottom: 40px;">
+                                    <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Highlights from exhibitions, launches and design events</p>
+                                    <div class="justified-gallery" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0 20px;">
+                                        <a href="images/testimonal/collage/1.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/1.jpeg" alt="Event 1" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                        <a href="images/testimonal/collage/2.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/2.jpeg" alt="Event 2" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                        <a href="images/testimonal/collage/3.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/3.png" alt="Event 3" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                        <a href="images/testimonal/collage/4.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/4.jpeg" alt="Event 4" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                        <a href="images/testimonal/collage/5.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/5.png" alt="Event 5" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                        <a href="images/testimonal/collage/Untitled design (4).png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                                            <img src="images/testimonal/collage/Untitled design (4).png" alt="Event 6" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab Content: Print Media -->
+                            <div class="tab-content" id="print-media">
+                            <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured in leading design and lifestyle publications</p>
                             <!-- PDF Articles Section -->
                             <div class="pdf_articles_section"
                                 style="margin-bottom: 50px; padding-bottom: 40px; border-bottom: 1px solid #e0d5cc;">
@@ -1670,6 +1709,9 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                            <!-- End of Print Media Tab Content -->
+
                         </div>
                     </div>
                 </div>
@@ -1930,6 +1972,28 @@
     </div>
     <span class="lightbox-next">&#10095;</span>
 </div>
+
+<script>
+// Media Tabs Functionality
+$(document).ready(function() {
+    $('.media-tab').click(function(e) {
+        e.preventDefault();
+
+        // Remove active class from all tabs
+        $('.media-tab').removeClass('active');
+
+        // Add active class to clicked tab
+        $(this).addClass('active');
+
+        // Hide all tab contents
+        $('.tab-content').removeClass('active');
+
+        // Show the corresponding tab content
+        var tabId = $(this).attr('data-tab');
+        $('#' + tabId).addClass('active');
+    });
+});
+</script>
 
 <script>
 var currentImageIndex = 0;
