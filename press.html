@@ -40,7 +40,7 @@
 </style>
 
 <style>
-    @import url("../use.typekit.net/tcy8bdu.css");
+    @import url("https://use.typekit.net/tcy8bdu.css");
 
     /* Submenu Styles - Light Floating Dropdown */
     .overlay-box-div-left ul li.has-submenu {
@@ -574,7 +574,7 @@
         s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
 
-        '../connect.facebook.net/en_US/fbevents.js');
+        'https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '4516143431836808');
 
@@ -1337,19 +1337,19 @@
                     <div class="col-md-12 ml-auto col-xl-12 mr-auto">
 
                         <!-- Media Content -->
-                        <div class="media-content-section" style="padding: 20px 0;">
+                        <div class="media-content-section" style="padding: 20px 0; position: relative; z-index: 5;">
 
                             <h2 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 40px; font-weight: 300; letter-spacing: 2px;">Media</h2>
 
                             <!-- Media Tabs Navigation -->
                             <style>
-                                .media-tabs-container { margin-bottom: 40px; }
+                                .media-tabs-container { margin-bottom: 40px; position: relative; z-index: 10; }
                                 .media-tabs { display: flex; justify-content: center; list-style: none; padding: 0; margin: 0 0 30px 0; border-bottom: 2px solid #e0d5cc; }
                                 .media-tab { padding: 15px 40px; cursor: pointer; font-size: 16px; letter-spacing: 1px; color: #888; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.3s ease; background: none; }
                                 .media-tab:hover { color: #a18971; }
                                 .media-tab.active { color: #a18971; border-bottom-color: #a18971; }
-                                .tab-content { display: none; }
-                                .tab-content.active { display: block; }
+                                .media-tab-content { display: none; }
+                                .media-tab-content.active { display: block; }
                             </style>
                             <div class="media-tabs-container">
                                 <ul class="media-tabs">
@@ -1360,7 +1360,7 @@
                             </div>
 
                             <!-- Tab Content: Online Media -->
-                            <div class="tab-content active" id="online-media">
+                            <div class="media-tab-content active" id="online-media">
                                 <div class="online-media-section" style="padding: 20px;">
                                     <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured coverage and mentions across digital platforms</p>
                                     <div class="online-media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 20px;">
@@ -1374,7 +1374,7 @@
                             </div>
 
                             <!-- Tab Content: Offline Events -->
-                            <div class="tab-content" id="offline-events">
+                            <div class="media-tab-content" id="offline-events">
                                 <!-- Testimonial Collage Section - Justified Gallery -->
                                 <div class="collage-section" style="margin-bottom: 60px; padding-bottom: 40px;">
                                     <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Highlights from exhibitions, launches and design events</p>
@@ -1402,7 +1402,7 @@
                             </div>
 
                             <!-- Tab Content: Print Media -->
-                            <div class="tab-content" id="print-media">
+                            <div class="media-tab-content" id="print-media">
                             <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured in leading design and lifestyle publications</p>
                             <!-- PDF Articles Section -->
                             <div class="pdf_articles_section"
@@ -1882,7 +1882,7 @@
     </div>
 
 
-    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#newsletter").validate({
@@ -1976,9 +1976,7 @@
 <script>
 // Media Tabs Functionality
 $(document).ready(function() {
-    $('.media-tab').click(function(e) {
-        e.preventDefault();
-
+    $(document).on('click', '.media-tab', function() {
         // Remove active class from all tabs
         $('.media-tab').removeClass('active');
 
@@ -1986,11 +1984,13 @@ $(document).ready(function() {
         $(this).addClass('active');
 
         // Hide all tab contents
-        $('.tab-content').removeClass('active');
+        $('.media-tab-content').removeClass('active');
 
         // Show the corresponding tab content
         var tabId = $(this).attr('data-tab');
         $('#' + tabId).addClass('active');
+
+        console.log('Tab clicked:', tabId);
     });
 });
 </script>

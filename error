@@ -1,0 +1,109 @@
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+Navigated to http://127.0.0.1:5500/press.html
+press.html:1 Refused to apply style from 'http://127.0.0.1:5500/use.typekit.net/tcy8bdu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.Understand this error
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+Navigated to http://127.0.0.1:5500/press.html
+press.html:1 Refused to apply style from 'http://127.0.0.1:5500/use.typekit.net/tcy8bdu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.Understand this error
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+Navigated to http://127.0.0.1:5500/press.html
+press.html:1 Refused to apply style from 'http://127.0.0.1:5500/use.typekit.net/tcy8bdu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.Understand this error
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+favicon.ico:1  GET http://127.0.0.1:5500/favicon.ico 404 (Not Found)Understand this error
+Navigated to http://127.0.0.1:5500/press.html
+press.html:1 Refused to apply style from 'http://127.0.0.1:5500/use.typekit.net/tcy8bdu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+favicon.ico:1  GET http://127.0.0.1:5500/favicon.ico 404 (Not Found)Understand this error
+Navigated to http://127.0.0.1:5500/press.html
+press.html:1 Refused to apply style from 'http://127.0.0.1:5500/use.typekit.net/tcy8bdu.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.Understand this error
+press.html:1885  GET http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js net::ERR_ABORTED 404 (Not Found)Understand this error
+press.html:574  GET http://127.0.0.1:5500/connect.facebook.net/en_US/fbevents.js net::ERR_BLOCKED_BY_CLIENT
+(anonymous) @ press.html:574
+(anonymous) @ press.html:575Understand this error
+press.html:1 Refused to execute script from 'http://127.0.0.1:5500/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.Understand this error
+press.html:1888 Uncaught TypeError: $(...).validate is not a function
+    at HTMLDocument.<anonymous> (press.html:1888:30)
+    at fire (jquery.min.js:3232:31)
+    at Object.fireWith [as resolveWith] (jquery.min.js:3362:7)
+    at jQuery.ready (jquery.min.js:3582:13)
+    at HTMLDocument.completed (jquery.min.js:3617:10)
+(anonymous) @ press.html:1888
+fire @ jquery.min.js:3232
+fireWith @ jquery.min.js:3362
+ready @ jquery.min.js:3582
+completed @ jquery.min.js:3617Understand this error
+favicon.ico:1  GET http://127.0.0.1:5500/favicon.ico 404 (Not Found)
