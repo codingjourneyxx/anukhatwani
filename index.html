@@ -2062,47 +2062,104 @@ $(document).ready(function() {
     <section class="home_press" id="press">
         <div class="press_container">
             <h1>Media</h1>
-            <div class="press_grid">
-                <div class="press_card">
-                    <div class="press_card_img">
-                        <img src="mediaimages/554297418_18483509911073342_2664465457516844630_n.jpg" alt="Article 1">
-                    </div>
-                    <div class="press_card_content">
-                        <h3>Crafting Timeless Spaces: A Design Philosophy</h3>
-                        <a href="press.html" class="press_card_link">Read More →</a>
-                    </div>
-                </div>
-                <div class="press_card">
-                    <div class="press_card_img">
-                        <img src="mediaimages/556225035_18484221229073342_4248176765551803804_n.jpg" alt="Article 2">
-                    </div>
-                    <div class="press_card_content">
-                        <h3>The Art of Bespoke Furniture Design</h3>
-                        <a href="press.html" class="press_card_link">Read More →</a>
-                    </div>
-                </div>
-                <div class="press_card">
-                    <div class="press_card_img">
-                        <img src="mediaimages/560424220_18486045292073342_2643170432292668526_n.jpg" alt="Article 3">
-                    </div>
-                    <div class="press_card_content">
-                        <h3>Sustainable Luxury: Design for the Future</h3>
-                        <a href="press.html" class="press_card_link">Read More →</a>
-                    </div>
-                </div>
-                <div class="press_card">
-                    <div class="press_card_img">
-                        <img src="mediaimages/565084798_18487493224073342_4337553807466302406_n.jpg" alt="Article 4">
-                    </div>
-                    <div class="press_card_content">
-                        <h3>Blending Heritage with Modern Elegance</h3>
-                        <a href="press.html" class="press_card_link">Read More →</a>
+
+            <!-- Media Tabs Styles -->
+            <style>
+                .media-tabs-container { margin-bottom: 40px; position: relative; z-index: 10; }
+                .media-tabs { display: flex; justify-content: center; list-style: none; padding: 0; margin: 0 0 30px 0; border-bottom: 2px solid #e0d5cc; }
+                .media-tab { padding: 15px 40px; cursor: pointer; font-size: 16px; letter-spacing: 1px; color: #888; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.3s ease; background: none; }
+                .media-tab:hover { color: #a18971; }
+                .media-tab.active { color: #a18971; border-bottom-color: #a18971; }
+                .media-tab-content { display: none; }
+                .media-tab-content.active { display: block; }
+                .collage-section a img:hover { transform: scale(1.02); }
+                .collage-link { display: block; cursor: pointer; }
+                @media (max-width: 768px) {
+                    .media-tabs { flex-wrap: wrap; }
+                    .media-tab { padding: 10px 20px; font-size: 14px; }
+                    .collage-row { flex-wrap: wrap !important; max-width: 100% !important; }
+                    .collage-row .collage-item { flex: 0 0 48% !important; }
+                    .collage-row .collage-item img { height: 220px !important; }
+                }
+                @media (max-width: 480px) {
+                    .collage-row .collage-item { flex: 0 0 100% !important; }
+                    .collage-row .collage-item img { height: 200px !important; }
+                }
+            </style>
+
+            <!-- Media Tabs Navigation -->
+            <div class="media-tabs-container">
+                <ul class="media-tabs">
+                    <li class="media-tab active" data-tab="online-media-home">Online Media</li>
+                    <li class="media-tab" data-tab="offline-events-home">Offline Events</li>
+                    <li class="media-tab" data-tab="print-media-home">Print Media</li>
+                </ul>
+            </div>
+
+            <!-- Tab Content: Online Media -->
+            <div class="media-tab-content active" id="online-media-home">
+                <div class="online-media-section" style="padding: 20px;">
+                    <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured coverage and mentions across digital platforms</p>
+                    <div class="online-media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 20px;">
+                        <div style="text-align: center; padding: 60px 30px; background: #f9f7f5; border-radius: 12px; border: 1px solid #e0d5cc;">
+                            <i class="fa fa-globe" style="font-size: 48px; color: #a18971; margin-bottom: 20px;"></i>
+                            <p style="color: #888; font-size: 16px;">Online media coverage coming soon</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Tab Content: Offline Events -->
+            <div class="media-tab-content" id="offline-events-home">
+                <div class="collage-section" style="margin-bottom: 60px; padding-bottom: 40px;">
+                    <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Highlights from exhibitions, launches and design events</p>
+                    <div class="justified-gallery" style="display: flex; flex-wrap: wrap; gap: 10px; padding: 0 20px;">
+                        <a href="images/testimonal/collage/1.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/1.jpeg" alt="Event 1" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                        <a href="images/testimonal/collage/2.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/2.jpeg" alt="Event 2" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                        <a href="images/testimonal/collage/3.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/3.png" alt="Event 3" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                        <a href="images/testimonal/collage/4.jpeg" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/4.jpeg" alt="Event 4" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                        <a href="images/testimonal/collage/5.png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/5.png" alt="Event 5" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                        <a href="images/testimonal/collage/Untitled design (4).png" class="collage-link" style="flex-grow: 1; height: 300px;">
+                            <img src="images/testimonal/collage/Untitled design (4).png" alt="Event 6" style="height: 100%; width: 100%; object-fit: cover; border: 4px solid #d4c4a8; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Print Media -->
+            <div class="media-tab-content" id="print-media-home">
+                <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 30px;">Featured in leading design and lifestyle publications</p>
+                <div style="text-align: center; padding: 40px;">
+                    <a href="press.html" style="display: inline-block; padding: 15px 40px; background: #a18971; color: #fff; text-decoration: none; border-radius: 5px; font-size: 16px; letter-spacing: 1px; transition: all 0.3s ease;">View Print Media Archive →</a>
+                </div>
+            </div>
+
             <div class="press_view_all">
-                <a href="press.html">View All Articles</a>
+                <a href="press.html">View All Media</a>
             </div>
+
+            <!-- Media Tabs Script -->
+            <script>
+            $(document).ready(function() {
+                $(document).on('click', '.media-tab', function() {
+                    $('.media-tab').removeClass('active');
+                    $(this).addClass('active');
+                    $('.media-tab-content').removeClass('active');
+                    var tabId = $(this).attr('data-tab');
+                    $('#' + tabId).addClass('active');
+                });
+            });
+            </script>
         </div>
     </section>
 
