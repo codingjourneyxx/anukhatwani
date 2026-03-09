@@ -1206,6 +1206,7 @@ label.error {
     color: #fff;
     font-size: 26px;
     line-height: 40px;
+    font-weight: bold;
 }
 
 .service_bx {
