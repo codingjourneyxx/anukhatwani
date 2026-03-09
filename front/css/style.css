@@ -774,8 +774,8 @@ section#section11 {
 }
 .ftr2_bx2 ul li a {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     box-shadow: inset 5px 5px 16px #9f7e61;
     border-radius: 50%;
     display: flex !important;
@@ -783,7 +783,7 @@ section#section11 {
     color: #9f7e61;
     justify-content: center;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 24px;
 }
 .ftr2 ul li a:hover {
     color: #aa8768;
