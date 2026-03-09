@@ -328,7 +328,7 @@ sup{font-size:10px;margin-left:2px;}
     z-index: 9;
     left: 39px;
     right: 39px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 15px 20px;
