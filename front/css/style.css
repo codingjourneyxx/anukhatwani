@@ -324,7 +324,7 @@ sup{font-size:10px;margin-left:2px;}
 }
 .sr_tx {
     position: absolute;
-    bottom: 45px;
+    bottom: 25px;
     z-index: 9;
     left: 39px;
 }
