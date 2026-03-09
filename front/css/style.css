@@ -327,6 +327,13 @@ sup{font-size:10px;margin-left:2px;}
     bottom: 45px;
     z-index: 9;
     left: 39px;
+    right: 39px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 .service_bx:nth-child(2) {
 /*    margin-top: 25px;*/
