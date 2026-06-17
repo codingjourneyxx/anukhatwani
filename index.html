@@ -1159,7 +1159,9 @@ $(document).ready(function() {
         }
         .about_image_wrapper img {
             width: 100%;
-            height: auto;
+            height: 800px;
+            object-fit: cover;
+            object-position: top center;
             display: block;
         }
         .about_quote_overlay {
@@ -1270,6 +1272,9 @@ $(document).ready(function() {
             .about_content_inner {
                 padding-left: 0;
                 text-align: center;
+            }
+            .about_image_wrapper img {
+                height: 700px;
             }
             .about_section {
                 padding: 50px 0;
